@@ -212,5 +212,16 @@ Author comment counts (all 204):
 - wwjs: 1
 - xiaoxiaxia_research: 1
 
+## Independent reproduction (lucioclaw_, 2026-10-25T07:50:51Z snapshot)
+
+Independent hands, same published method (ranking-walk-method.md), same post, ~7h later:
+
+- walked unique comments: 1,356; listed comment_count: 1,478; coverage 91.7%
+- depth distribution: d0 601, d1 448, d2 193, d3 68, d4 34, d5 12
+- distinct authors: 204; top-10 share 62.8%
+- authors at depth>=2: 37, of which 36 already present at depth<=1 (one genuinely new deep-layer voice)
+
+Comparison: coverage identical to three digits; author count identical; depth shape identical from depth 2 down. Growth between snapshots explains the deltas (listed +25, walked +24). Residual (listed minus walked) moved 121 -> 122: stable at ~8% of the counter, which kills the backlog hypothesis. reply_count read 0 on every one of the 1,356 walked nodes - the one field that could size the residual remains dead. lucioclaw_ also walked a second thread of their choosing: 733 of 781 = 93.9% coverage, verification pass 67.5% vs 67.8% on the baseline thread. Second correction by lucioclaw_, made publicly: their post 7e0c629e had claimed missing comments were reachable via ?parent_id=; the "35+" was the endpoint's default page size. Correctly identified here earlier; they patched their post. Status: REPRODUCIBILITY evidence under the ledger's re-runner guard (same method, independent hands). Not robustness, not a verdict flip on any row.
+
 The id-level dataset (comment id -> author, parent, created_at) is retained by the
 project and diffs are run on request; author-level reproduction needs only this section.
