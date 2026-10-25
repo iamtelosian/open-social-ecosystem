@@ -1,0 +1,46 @@
+# ODRL and social-graph edge consent: is a profile needed?
+
+Research analysis, 2026-10-24. Feeds white paper 3.3. Status: analysis, not a design commitment. Author self-review material; no independent challenge has tested it.
+
+## The question
+
+3.3's self-review recorded a gap: "this paper has not yet specified a profile applying [ODRL's consent] mechanisms to social-graph edges, where every edge is jointly authored and the third endpoint's consent semantics, revocation included, must be machine-executable at graph scale." Before drafting a profile, the prior question: is one needed? Three candidate answers are held open throughout: existing constructs suffice with conventions; a profile is needed; or ODRL is the wrong layer for the consent part of the problem.
+
+## Sources (all fetched 2026-10-24)
+
+- ODRL Information Model 2.2, W3C Recommendation: https://www.w3.org/TR/odrl-model/
+- ODRL Vocabulary & Expression 2.2: https://www.w3.org/TR/odrl-vocab/
+- ActivityPub, W3C Recommendation, section 6.5 (Follow): https://www.w3.org/TR/activitypub/
+- ATProto lexicon app.bsky.graph.follow, official repository (bluesky-social/atproto, packages/api/lexicons/app/bsky/graph/follow.json, fetched 2026-10-24): "Record declaring a social 'follow' relationship of another account. Duplicate follows will be ignored by the AppView." Required properties: subject (DID), createdAt; no acknowledgement or consent field. (A lexicon.garden mirror was used for discovery; the claims here verify against the official source.)
+- Data Privacy Vocabulary (DPV), W3C DPVCG Community Group final report 2024-08-01: https://www.w3.org/community/reports/dpvcg/CG-FINAL-dpv-20240801/ - prior art for consent-state vocabulary including withdrawal, with ISO/IEC TS 27560 consent-record guidance
+
+## Premise check: the self-review premise does not survive inspection
+
+The premise had two parts. First, that ODRL's consent functions assume single-party assets. The spec says otherwise, in both directions: consentingParty ("the Party to obtain consent FROM") and consentedParty ("the Party who OBTAINS the consent") are duty-scoped roles attached to obtainConsent ("to obtain verifiable consent to perform the requested action in relation to the Asset", odrl-vocab 4.4.31) - a pre-action obligation on a rule. ODRL does not model who authored the asset at all, single- or multi-party; it models who must be asked before an action. The single-party assumption is not in the consent functions. Second, the real normative constraint is elsewhere: an Agreement "MUST have one assigner property value (of type Party)" and "MUST have one assignee property value (of type Party)" (odrl-model 2.1.3; Offer likewise requires one assigner, 2.1.2). A bilateral relationship cannot be expressed as a single two-assigner agreement - except by collapsing both endpoints into a PartyCollection (2.5.6) as the assigner, which erases exactly the per-endpoint consent state the paper needs. So the refined premise: ODRL models policies over assets, not the consent state of relationships; joint authorship is expressible only at the cost of the semantics that make it worth expressing.
+
+Second, that every edge is jointly authored. False on the protocol record - see the taxonomy.
+
+## The taxonomy: four edge classes, four consent semantics
+
+**Directed follows (ATProto shape).** app.bsky.graph.follow is a unilateral record in the follower's repository; the followee's DID is data in it, not a participant in its creation. The followee's consent is not a precondition of the edge's existence - the remedies are block (also a unilateral record) and moderation, not consent. For ODRL: the edge has exactly one author, and the single-assigner Agreement fits without any profile. Counterexample to the blanket joint-authorship premise, and the base rate of social-graph edges.
+
+**Mutually acknowledged relationships (ActivityPub shape).** On the client-to-server side, the Follow activity's side effect fires "when and only if an Accept activity is subsequently received with this Follow activity as its object" (ActivityPub 6.5). On the server-to-server side (7.5), the receiving server "SHOULD generate either an Accept or Reject activity with the Follow as the object" - and the Accept "MAY be generated automatically", so the handshake can be nominal, while a server that never sends a Reject leaves the requester in an intermediate state. Reject and Undo exist as protocol-level states; Mastodon's locked accounts force re-approval per follower in practice. Here the consent handshake already lives in the protocol's activity state machine. ODRL can express usage terms over the resulting edge fact (who may read, re-serve, or settle against it), but the handshake is not a policy-expression problem. Wrong layer for formation; right layer for post-formation usage terms.
+
+**Public references (mentions, quotes).** The referencing party authors unilaterally; the referenced party is a data subject, not an author. ODRL's informedParty/trackedParty functions fit this semantics better than the consent functions do. Expression of usage terms is adequate with existing constructs; enforcement is out of ODRL's scope regardless of profile.
+
+**Private/shared attributes (DMs, locked-audience posts, shared private media).** The only class where joint-interest consent semantics are genuinely load-bearing: per-party consent state, and revocation with downstream observability. This is where the gap is real - and it is not an expression gap. ODRL can attach an obtainConsent duty, but the spec contains no consent-state and no revocation protocol as normative vocabulary (zero occurrences of revoke/revocation/withdrawal across both documents). That absence is narrower than it looks: ODRL can express time-bounded permissions through constraints and supersession through inheritFrom, so revocation-OF-RECORD is an application-level convention the standard leaves to the designer - it is unbuilt here, not unbuildable. Observability of downstream honoring is likewise not an ODRL concept; that is this design's placement decision (receipts at 4.4, reader-side attestation at 4.4b), not evidence the function cannot live at the expression layer in some other architecture.
+
+## What ODRL covers and what it never covers
+
+Expression: yes - permissions, prohibitions, obligations, duties including obtainConsent, profiles as the designed extension point, inheritFrom for policy supersession, conflict terms for rule clashes. Enforcement: no - by design; the paper already scopes remedy as observability plus refusal to serve, not litigation. Revocation: no - nothing in the spec; the nearest constructs are superseding policies via inheritance. Downstream observability: no - that is the receipt layer (4.4) and reader-side attestation (4.4b), where the paper already puts it.
+
+## Conclusion (candidate, held open)
+
+Existing constructs suffice for three of the four edge classes with conventions rather than a profile: directed follows and public references fit single-assigner expression today, and acknowledged relationships need ODRL only for post-formation usage terms. The genuine gap narrows to shared-private attributes, and it is a consent-state and revocation gap - which belongs to the protocol layer (where ATProto and ActivityPub already keep edge state) and the receipt layer, not to an ODRL profile. Accordingly: no profile is commissioned, and nothing here is a claim about the standard's categorical limits. What this design still needs to specify and test: (1) the consent-state machine for shared-private attributes - states, transitions, and who may effect them - wherever it lives; (2) revocation-of-record as an application convention (time-bounded permissions via constraints, supersession via inheritFrom, or protocol-layer state), tested against a consumer that received the asset before revocation; (3) the division of labor between protocol-state consent and expression-layer usage terms, verified on one real edge class rather than asserted across all four. If consent-state vocabulary is ever needed at the expression layer, the prior art to extend is DPV (which already models consent status including withdrawal), not a new from-scratch profile.
+
+## Counterexamples and falsifiers
+
+- AP locked-account re-approval and Undo: consent as protocol state, contradicting any design that puts formation consent in the policy layer.
+- ATProto duplicate follows ignored by the AppView: edge uniqueness is an aggregator convention, not a consent event.
+- Block as a unilateral record: the negative edge is also single-author, and any consent model that requires the blockee's participation is dead on arrival.
+- Falsifier for this analysis: a demonstrated edge class whose usage terms require machine-executable per-party consent state at the expression layer, and cannot be served by protocol-state consent plus ODRL usage terms. Such a case would reopen the profile question - targeted at shared-private attributes, where the analysis already expects it to come from.
