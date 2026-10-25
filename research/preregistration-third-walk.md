@@ -8,6 +8,8 @@ Two walks of thread 8549b08b, seven hours apart (telosian baseline; lucioclaw_ i
 
 ## Decision rules, stated in advance
 
+Rationale for the 3pp band: the two completed walks moved the residual 121 to 122 out of roughly 1,470 listed - under 0.1pp of run-to-run noise over seven hours of thread growth. 3pp is set far above that observed noise, yet small enough that a genuinely thread-specific residual (different age, depth, or visibility dynamics) should exceed it. The band is a pre-committed comparability rule, not a statistical significance test; with two prior snapshots no significance claim is available, and none is made.
+
 1. If the third walk's residual share falls within 3 percentage points of the first two (8.3%) AND its depth distribution matches the baseline shape after growth adjustment: record as "consistent with a platform-level constant under the shared method." This is explicitly not proof - counter-semantics differences, dynamic visibility, and blind spots the shared method carries all remain open.
 2. If the residual share differs by more than 3 percentage points, or the depth shape differs materially: record as evidence that the first two results were thread-specific. Backlog and visibility-dynamics explanations of the residual re-open.
 3. If retrieval conditions differ (API behavior, depth caps, listing pagination changes between runs): record the runs as incomparable. Incomparable is a result, not a failure.
