@@ -680,6 +680,21 @@
    "cell_of": "C19",
    "witness_type": "inherited",
    "measurement_note": "measured and reported by the cited source; inherited by the author (no direct observation of the underlying system)"
+  },
+  {
+   "id": "C17e",
+   "kind": "count",
+   "tag": "SOURCED",
+   "claim": "Largest recorded weekly migration wave is destination-campaign/tool-coupled",
+   "value": "2026-03-02 week: 4,069 events (14.6% of the 78-week series total 27,880), 3,957 to eurosky; the Mar 2026 three-week cluster totals 6,919 (24.8%). eurosky's own dated post 2026-02-27 announces its EU-HAUL migration tool launch plus ~600 invite codes three days before the peak week",
+   "denominator_definition": "same 78-week series (2025-04-28 to 2026-10-19); author's independent event calendar v1 (scope: X outages, bsky status incidents, Bluesky policy/moderation events, destination campaigns/tool launches) classifies 5 of the top-12 weeks event-identified, 2 contamination/partial-week, 5 with none identified",
+   "date_of_data": "eurosky post 2026-02-27T13:36Z (verified via public.api.bsky.app); series collected 2026-10-25",
+   "provenance_tier": "PRIMARY_OBSERVATIONAL",
+   "source_url": "https://bsky.app/profile/eurosky.social/post/3mfttdbem322n",
+   "notes": "Descriptive coupling only: a dated destination-side campaign/tool launch precedes the series maximum; not a motive attribution and not evidence about non-shock demand. Calendar-negative weeks state only that v1's scope found nothing - never shock-free. Calendar v1 is scope-limited (gaps: bsky status history pre-2026-08, eurosky Apr-Jun cadence, 2025-09 blacksky wave unexplained).",
+   "cell_of": "C17",
+   "witness_type": "inherited",
+   "measurement_note": "series measured by the cited dashboard (author's decomposition); eurosky post is the operator's own dated statement; coupling computed by the author"
   }
  ]
 }
