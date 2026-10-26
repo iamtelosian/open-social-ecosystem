@@ -406,7 +406,7 @@
    "kind": "assumption",
    "tag": "ASSUMPTION",
    "claim": "Users choose federated/self-hosted options when NOT under shock",
-   "value": "OPEN, partially narrowed 2026-10-26: located evidence shows non-shock intra-network choice exists (C15b/C15c) but is community/moderation-motivated; no located evidence isolates non-shock choice of exit/portability itself. Strong-control growth is tool+migration-coupled (C16).",
+   "value": "OPEN: located evidence shows intra-network movement toward niche servers with better niche retention, but shock-timing and motive are not identified (I5 conditional); no located evidence isolates non-shock choice of exit/portability itself. Strong-control growth is tool+migration-coupled (C16).",
    "alternatives_preserved": "located growth episodes are all shock/wave-coupled (C9, C12, C14); people chose Bluesky-the-app, not federation.",
    "provenance_tier": "AUTHOR",
    "notes": "Research gate in paper ch08 8.9. Test: Bluesky non-shock cohort retention; Mastodon instance-level migration episodes with known non-shock causes.",
@@ -442,12 +442,12 @@
    "kind": "count",
    "tag": "SOURCED",
    "claim": "Direction of intra-network migration",
-   "value": "users who move gravitate from larger to smaller, more niche servers",
+   "value": "accounts are more likely to move from larger to smaller servers (ERGM over 28,258 moved accounts created May-Jun 2023)",
    "denominator_definition": "qualitative trend over the same trace dataset",
    "date_of_data": "same as C15a",
    "provenance_tier": "SECONDARY_ACADEMIC",
    "source_url": "https://workshop-proceedings.icwsm.org/pdf/2024_43.pdf",
-   "notes": "Established users choosing niche instances - revealed preference for community fit, exercised through federation, not driven by incumbent unavailability.",
+   "notes": "Direction observed; motive NOT identified - the model's fit terms are server size, open registrations, and language match. The mover cohort was itself born in the 2022-23 shock waves; moves within shock-driven waves are not automatically non-shock choices.",
    "witness_type": "inherited",
    "measurement_note": "measured and reported by the cited source; inherited by the author (no direct observation of the underlying system)"
   },
@@ -483,12 +483,12 @@
    "id": "I5",
    "kind": "interpretation",
    "tag": "SOURCED",
-   "claim": "Located non-shock intra-network choice is community/moderation-motivated, not portability-motivated",
-   "value": "C15b + C15c: established users move toward niche instances and niche instances retain better; the exercised feature is community selection",
-   "alternatives_preserved": "migration events still partly shock-coupled (C16: 96.4% of key holders migrated); C15 predates atproto-era tooling; stated-motivation surveys (Zia et al. 2023: data control) are stated, not revealed, preference; Blacksky-style community PDS choice is moderation-market evidence, not exit-demand evidence.",
+   "claim": "CONDITIONAL: trace patterns show movement toward niche servers and better niche retention; whether these moves occur outside shock windows and what motivates them is not established",
+   "value": "C15b + C15c observe direction and retention association only; Colglazier does not identify move timing relative to shocks nor motives (language match is the modeled fit term)",
+   "alternatives_preserved": "moves may be shock-aftermath repositioning rather than non-shock demand; language match suggests fit/community selection but does not isolate moderation motives; stated-motivation surveys are stated, not revealed, preference; C15 predates atproto-era tooling.",
    "provenance_tier": "DERIVED",
-   "notes": "Supports I4's 'federation as moderation-layer market' candidate over the portability-as-demand candidate, with current evidence.",
+   "notes": "Consistent with the moderation-layer-market candidate but does NOT discriminate among I4 candidates; no candidate ranking is a finding.",
    "witness_type": "inherited"
   }
  ]
-  }
+}
