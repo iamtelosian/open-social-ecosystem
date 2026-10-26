@@ -30,7 +30,7 @@ Capability: any external timestamping or transparency service.
 
 Deliverable: take a stated measurement range (range + selection rule + artifact hash), anchor it to a clock the issuer does not control, and report the mechanics and the trust assumptions of the anchor.
 
-Counts as: a mechanics demo for the receipt time-anchor schema (its documented limits apply: an anchor establishes a commitment existed no later than T; it does not prove the range predates privately seen results). Does not count as: proof of any measured property.
+Counts as: a mechanics demo for the receipt time-anchor schema (its documented limits apply: an anchor establishes a commitment existed no later than T; it does not prove the range predates privately seen results). This is a research-gate exercise: it demonstrates and documents a technique, and it is not a build step or an implementation of the network's anchor layer. Does not count as: proof of any measured property.
 
 ## T4. Funding-map critique
 
