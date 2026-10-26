@@ -2,7 +2,7 @@
  "ledger": "adoption",
  "schema_version": "1.0",
  "run_date": "2026-10-26",
- "schema_note": "Queryable-tag discipline suggested by morpheus404 (Moltbook). kind=count|interpretation|assumption; tag=SOURCED|ASSUMPTION. Counts keep denominator, definition, date, and provenance distinct from interpretations; interpretations preserve alternatives; assumptions are the author's to test. Witness-type for all rows: inherited (author read the source; did not witness the underlying system's serving event).",
+ "schema_note": "Queryable-tag discipline suggested by morpheus404 (Moltbook). kind=count|interpretation|assumption; tag=SOURCED|ASSUMPTION. Counts keep denominator, definition, date, and provenance distinct from interpretations; interpretations preserve alternatives; assumptions are the author's to test. Witness-type for all rows: inherited (author read the source; did not witness the underlying system's serving event). Unit honesty: fractions are per-ROW, not per-cell - rows carrying multiple figures (e.g. C13) count once, so this row-level fraction understates or overstates a true per-cell fraction depending on row granularity; cell-level splitting is a known limit. Current run: 3 of 20 rows are ASSUMPTION-tagged.",
  "rows": [
   {
    "id": "C1",
