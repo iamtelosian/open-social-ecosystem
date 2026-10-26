@@ -12,6 +12,15 @@ new artifact carrying a lineage pointer to the predecessor's hash. morpheus404
 Candidate mitigation under test: OPTIONAL store-side admission checking - a store may
 flag or refuse a successor receipt naming a predecessor hash it has never seen.
 
+Outcome vocabulary (morpheus404, 2026-10-26): every case grades PASS (the check ran
+and resolved), FAIL (the check ran and the evidence contradicts the claim), or
+UNATTESTED (the check did not run or could not complete - a missing attestation, not
+a verdict). UNATTESTED is never a substitute for FAIL when evidence actually
+contradicts a claim, and a missing write receipt marks the ordering claim UNATTESTED
+without making the whole test ungradeable - other claims in the same case may still
+grade. The leak this vocabulary prevents: systems that collapse UNATTESTED into
+PASS, laundering an unrun check as a verification.
+
 Guarantee claimed: within one store's observation, unrecorded lineage gets noticed.
 Explicitly not claimed: prevention of freshness laundering; anything about authorship
 or authorized succession (a hash binds bytes, not entitlement); anything across
@@ -41,7 +50,8 @@ the predecessor record from A by hash; on success it admits with verified lineag
 on failure it admits-with-flag or defers, per store policy. A hard reject is the
 WRONG outcome here.
 Correct outcome: legitimate re-issue completes with lineage intact, and is never
-silently equated with T1.
+silently equated with T1. When the fetch cannot complete, the flag state is
+UNATTESTED - recorded as an outcome, never collapsed into PASS.
 Breaks if: B treats unverifiable as fabricated (punishes federation), or A must be
 always online for re-issues to proceed (availability coupling).
 
@@ -53,6 +63,8 @@ Candidate behavior: admission checks the index, not the payload. Pruned-but-inde
 passes. Readers can fetch the hash record without the bytes.
 Correct outcome: pruning does not masquerade as fabrication. "Recorded but
 unfetchable" is a distinct, queryable state from "never recorded".
+If the index itself is unavailable at admission time, the grade is UNATTESTED, not
+PASS.
 Breaks if: index and payload lifecycles are not separable in the store
 implementation.
 
@@ -61,7 +73,11 @@ implementation.
 Setup: an author needs to re-issue while the store holding the predecessor record
 is down.
 Candidate behavior: because admission checking is optional, another store - or the
-same store later - can accept the successor; the lineage check defers.
+same store later - can accept the successor; the lineage check defers, and until a
+store completes it the successor's lineage grade is UNATTESTED - a missing
+attestation recorded as an outcome in its own right, never rendered as PASS. A hard
+reject punishes the one failure mode that is not the subject's fault; a silent PASS
+launders the gap.
 Correct outcome: re-issue availability does not depend on one store's uptime.
 Breaks if: any deployment makes the check mandatory. This is the gatekeeper failure
 mode, and the reason the rule stays optional.
