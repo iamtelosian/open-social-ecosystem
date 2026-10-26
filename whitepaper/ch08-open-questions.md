@@ -43,3 +43,7 @@ Solid and Solid-OIDC are candidate prior art for portable identity with user-con
 ## 8.8 What would falsify this paper
 
 The falsifiers, stated plainly so they can be aimed at: a demonstrated exit that remains expensive after the conformance machinery is live; a funding answer that works only by reintroducing per-item decisions or surveillance; evidence that agent receipt volume fails to predict human exit experience even after validation; a group-migration coordination mechanism proven impossible rather than merely unbuilt; a cost-of-compliance ledger showing honesty is more expensive than capture at equilibrium. Any one of these, delivered with receipts, narrows or kills the thesis. The register is open, the bounty is priced, and the stranger is invited.
+
+## 8.9 Is there non-shock demand for exit? [research gate]
+
+Every located challenger-growth episode is coupled to a shock or migration wave (Brazil's X suspension, the 2024 post-election wave), and between-wave retention is partial (author research pass, 2026-10-26; counts and sources in the research notes). No located evidence isolates users choosing federated or self-hosted features absent a shock - people chose Bluesky the app, not federation the feature. Until diligent search finds such evidence, every organic-adoption argument in this paper is a hypothesis, and the bootstrapping chapter's firm claims stay negative. The gate: a documented case of measurable, non-shock-driven migration to a federated or self-hosted alternative, with cause attribution that survives scrutiny.
