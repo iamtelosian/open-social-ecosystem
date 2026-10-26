@@ -406,7 +406,7 @@
    "kind": "assumption",
    "tag": "ASSUMPTION",
    "claim": "Users choose federated/self-hosted options when NOT under shock",
-   "value": "OPEN - no located evidence isolates non-shock choice of federated features specifically",
+   "value": "OPEN, partially narrowed 2026-10-26: located evidence shows non-shock intra-network choice exists (C15b/C15c) but is community/moderation-motivated; no located evidence isolates non-shock choice of exit/portability itself. Strong-control growth is tool+migration-coupled (C16).",
    "alternatives_preserved": "located growth episodes are all shock/wave-coupled (C9, C12, C14); people chose Bluesky-the-app, not federation.",
    "provenance_tier": "AUTHOR",
    "notes": "Research gate in paper ch08 8.9. Test: Bluesky non-shock cohort retention; Mastodon instance-level migration episodes with known non-shock causes.",
@@ -422,6 +422,73 @@
    "provenance_tier": "AUTHOR",
    "notes": "Next-census check.",
    "witness_type": "inherited"
+  },
+  {
+   "id": "C15a",
+   "kind": "count",
+   "tag": "SOURCED",
+   "claim": "Intra-network migration scale on Mastodon",
+   "value": "41,111 accounts marked moved, of 1,784,438 discovered accounts (2.3%)",
+   "denominator_definition": "accounts discovered via public timelines Oct 2020 - Aug 2023, filtered; moved status queried Feb 2024",
+   "date_of_data": "accounts created 2020-08 - 2024-01; queried 2024-02",
+   "provenance_tier": "SECONDARY_ACADEMIC",
+   "source_url": "https://workshop-proceedings.icwsm.org/pdf/2024_43.pdf",
+   "notes": "Survivors-biased denominator (only servers still existing at query time). Mastodon 'moved' transfers followers, not post history - weaker than atproto migration.",
+   "witness_type": "inherited",
+   "measurement_note": "measured and reported by the cited source; inherited by the author (no direct observation of the underlying system)"
+  },
+  {
+   "id": "C15b",
+   "kind": "count",
+   "tag": "SOURCED",
+   "claim": "Direction of intra-network migration",
+   "value": "users who move gravitate from larger to smaller, more niche servers",
+   "denominator_definition": "qualitative trend over the same trace dataset",
+   "date_of_data": "same as C15a",
+   "provenance_tier": "SECONDARY_ACADEMIC",
+   "source_url": "https://workshop-proceedings.icwsm.org/pdf/2024_43.pdf",
+   "notes": "Established users choosing niche instances - revealed preference for community fit, exercised through federation, not driven by incumbent unavailability.",
+   "witness_type": "inherited",
+   "measurement_note": "measured and reported by the cited source; inherited by the author (no direct observation of the underlying system)"
+  },
+  {
+   "id": "C15c",
+   "kind": "count",
+   "tag": "SOURCED",
+   "claim": "Retention by instance type",
+   "value": "new accounts on the largest general instances are less likely to remain active after 91 days than those on other servers",
+   "denominator_definition": "91-day activity retention by server class, same trace dataset",
+   "date_of_data": "same as C15a",
+   "provenance_tier": "SECONDARY_ACADEMIC",
+   "source_url": "https://workshop-proceedings.icwsm.org/pdf/2024_43.pdf",
+   "notes": "Niche-community fit retains better than general-purpose scale.",
+   "witness_type": "inherited",
+   "measurement_note": "measured and reported by the cited source; inherited by the author (no direct observation of the underlying system)"
+  },
+  {
+   "id": "C16",
+   "kind": "count",
+   "tag": "SOURCED",
+   "claim": "Attribution of strong-control growth (C7 companion)",
+   "value": "96.4% of users with own rotation keys on multi-user third-party PDSes have performed at least one migration; growth 0.036% -> 0.299% in 7 months attributed by the author to PDS migration tools creating keys during migration",
+   "denominator_definition": "users with own rotation keys on multi-user third-party PDSes, July 2026 census",
+   "date_of_data": "2026-07-21 (comparison census ~Dec 2025)",
+   "provenance_tier": "SECONDARY",
+   "source_url": "https://rob.leaflet.pub/3mr7vhdonuk2i",
+   "notes": "Growth is tool+migration-coupled, NOT isolated demand for identity control itself; supports I2's latent-demand alternative only in the weak form (UX unlocks what migration started).",
+   "witness_type": "inherited",
+   "measurement_note": "measured and reported by the cited source; inherited by the author (no direct observation of the underlying system)"
+  },
+  {
+   "id": "I5",
+   "kind": "interpretation",
+   "tag": "SOURCED",
+   "claim": "Located non-shock intra-network choice is community/moderation-motivated, not portability-motivated",
+   "value": "C15b + C15c: established users move toward niche instances and niche instances retain better; the exercised feature is community selection",
+   "alternatives_preserved": "migration events still partly shock-coupled (C16: 96.4% of key holders migrated); C15 predates atproto-era tooling; stated-motivation surveys (Zia et al. 2023: data control) are stated, not revealed, preference; Blacksky-style community PDS choice is moderation-market evidence, not exit-demand evidence.",
+   "provenance_tier": "DERIVED",
+   "notes": "Supports I4's 'federation as moderation-layer market' candidate over the portability-as-demand candidate, with current evidence.",
+   "witness_type": "inherited"
   }
  ]
-}
+  }
