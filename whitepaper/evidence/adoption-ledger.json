@@ -2,7 +2,7 @@
  "ledger": "adoption",
  "schema_version": "1.1",
  "run_date": "2026-10-26",
- "schema_note": "Queryable-tag discipline suggested by morpheus404 (Moltbook). kind=count|interpretation|assumption; tag=SOURCED|ASSUMPTION. Granularity: CELL-LEVEL since schema 1.1 - each count row carries exactly one figure (composite rows from 1.0 were split; cell_of names the original row), so the per-cell ASSUMPTION fraction morpheus404 asked for is directly computable: tag counts / row counts. Interpretation and assumption rows are not measured cells; they carry alternatives_preserved. Witness-type for all rows: inherited (author read the source; did not witness the underlying system's serving event). Current run: 30 rows total, 24 measured count cells (all SOURCED), 3 ASSUMPTION-tagged rows (I4, A1, A2).",
+ "schema_note": "Queryable-tag discipline suggested by morpheus404 (Moltbook). kind=count|interpretation|assumption; tag=SOURCED|ASSUMPTION. Granularity: CELL-LEVEL since schema 1.1 - each count row carries exactly one figure (cell_of names the original composite row). Provenance: every row is inherited, not measured by the author - the cited source did the measuring; provenance_tier grades the source, witness_type states the author's relationship to it. Completeness: ASSUMPTION tags cover assumptions identified to date; this is NOT a complete inventory of the paper's assumptions. The ASSUMPTION fraction is a schema statistic about this ledger's bookkeeping, not a measure of evidential confidence in any claim. Interpretation and assumption rows are not measured cells; they carry alternatives_preserved. Current run: 30 rows, 24 count cells, 3 ASSUMPTION-tagged rows (I4, A1, A2).",
  "rows": [
   {
    "id": "C1",
@@ -14,7 +14,9 @@
    "date_of_data": "end-2025",
    "provenance_tier": "PRIMARY",
    "source_url": "https://bsky.social/about/blog/01-29-2026-transparency-report-2025",
-   "notes": "Reported accounts, not active users."
+   "notes": "Reported accounts, not active users.",
+   "witness_type": "inherited",
+   "measurement_note": "measured and reported by the cited source; inherited by the author (no direct observation of the underlying system)"
   },
   {
    "id": "C2",
@@ -26,7 +28,9 @@
    "date_of_data": "through 2026-10-25",
    "provenance_tier": "SECONDARY",
    "source_url": "https://atproto.barn.city/migrations",
-   "notes": "Repositories are not necessarily distinct people."
+   "notes": "Repositories are not necessarily distinct people.",
+   "witness_type": "inherited",
+   "measurement_note": "measured and reported by the cited source; inherited by the author (no direct observation of the underlying system)"
   },
   {
    "id": "C3",
@@ -38,7 +42,9 @@
    "date_of_data": "through 2026-10-25",
    "provenance_tier": "SECONDARY",
    "source_url": "https://atproto.barn.city/migrations",
-   "notes": "Hosting concentration is not user choice or exit difficulty. Same dataset as C4: not independent confirmation."
+   "notes": "Hosting concentration is not user choice or exit difficulty. Same dataset as C4: not independent confirmation.",
+   "witness_type": "inherited",
+   "measurement_note": "measured and reported by the cited source; inherited by the author (no direct observation of the underlying system)"
   },
   {
    "id": "C4a",
@@ -51,7 +57,9 @@
    "provenance_tier": "SECONDARY",
    "source_url": "https://atproto.barn.city/migrations",
    "notes": "Events (28,376) distinct from identities (26,103).",
-   "cell_of": "C4"
+   "cell_of": "C4",
+   "witness_type": "inherited",
+   "measurement_note": "measured and reported by the cited source; inherited by the author (no direct observation of the underlying system)"
   },
   {
    "id": "C4b",
@@ -64,7 +72,9 @@
    "provenance_tier": "SECONDARY",
    "source_url": "https://atproto.barn.city/migrations",
    "notes": "Events distinct from identities (C4a).",
-   "cell_of": "C4"
+   "cell_of": "C4",
+   "witness_type": "inherited",
+   "measurement_note": "measured and reported by the cited source; inherited by the author (no direct observation of the underlying system)"
   },
   {
    "id": "C5",
@@ -76,7 +86,9 @@
    "date_of_data": "2026-07-21",
    "provenance_tier": "SECONDARY",
    "source_url": "https://rob.leaflet.pub/3mr7vhdonuk2i",
-   "notes": "Different definition AND date from C6 and C2; never combine."
+   "notes": "Different definition AND date from C6 and C2; never combine.",
+   "witness_type": "inherited",
+   "measurement_note": "measured and reported by the cited source; inherited by the author (no direct observation of the underlying system)"
   },
   {
    "id": "C6",
@@ -88,7 +100,9 @@
    "date_of_data": "through 2026-10-25",
    "provenance_tier": "SECONDARY",
    "source_url": "https://atproto.barn.city/migrations",
-   "notes": "C5 and C6 are different definitions; never combine."
+   "notes": "C5 and C6 are different definitions; never combine.",
+   "witness_type": "inherited",
+   "measurement_note": "measured and reported by the cited source; inherited by the author (no direct observation of the underlying system)"
   },
   {
    "id": "C7",
@@ -100,7 +114,9 @@
    "date_of_data": "2026-07-21",
    "provenance_tier": "SECONDARY",
    "source_url": "https://rob.leaflet.pub/3mr7vhdonuk2i",
-   "notes": "Strong-control definition and denominator must accompany any percentage."
+   "notes": "Strong-control definition and denominator must accompany any percentage.",
+   "witness_type": "inherited",
+   "measurement_note": "measured and reported by the cited source; inherited by the author (no direct observation of the underlying system)"
   },
   {
    "id": "C8a",
@@ -113,7 +129,9 @@
    "provenance_tier": "SECONDARY_AGGREGATOR",
    "source_url": "https://fedidb.com/software/mastodon",
    "notes": "A snapshot, not a trend. Aggregator, not official; Mastodon is not all fediverse.",
-   "cell_of": "C8"
+   "cell_of": "C8",
+   "witness_type": "inherited",
+   "measurement_note": "measured and reported by the cited source; inherited by the author (no direct observation of the underlying system)"
   },
   {
    "id": "C8b",
@@ -126,7 +144,9 @@
    "provenance_tier": "SECONDARY_AGGREGATOR",
    "source_url": "https://fedidb.com/software/mastodon",
    "notes": "Ratio is derived within one snapshot.",
-   "cell_of": "C8"
+   "cell_of": "C8",
+   "witness_type": "inherited",
+   "measurement_note": "measured and reported by the cited source; inherited by the author (no direct observation of the underlying system)"
   },
   {
    "id": "C9a",
@@ -139,7 +159,9 @@
    "provenance_tier": "SECONDARY_PRESS",
    "source_url": "https://www.theverge.com/2024/8/31/24233174/bluesky-has-gained-a-million-new-users-in-the-last-three-days",
    "notes": "Identifies shock-driven adoption, not portability-driven adoption.",
-   "cell_of": "C9"
+   "cell_of": "C9",
+   "witness_type": "inherited",
+   "measurement_note": "measured and reported by the cited source; inherited by the author (no direct observation of the underlying system)"
   },
   {
    "id": "C9b",
@@ -152,7 +174,9 @@
    "provenance_tier": "SECONDARY_PRESS",
    "source_url": "https://www.theverge.com/2024/8/31/24233174/bluesky-has-gained-a-million-new-users-in-the-last-three-days",
    "notes": "Identifies shock-driven adoption, not portability-driven adoption.",
-   "cell_of": "C9"
+   "cell_of": "C9",
+   "witness_type": "inherited",
+   "measurement_note": "measured and reported by the cited source; inherited by the author (no direct observation of the underlying system)"
   },
   {
    "id": "C10a",
@@ -165,7 +189,9 @@
    "provenance_tier": "TERTIARY",
    "source_url": "https://dune.com/assafian/farcaster",
    "notes": "Crypto-market-coupled audience; comparison-class limit for non-tokenized design.",
-   "cell_of": "C10"
+   "cell_of": "C10",
+   "witness_type": "inherited",
+   "measurement_note": "measured and reported by the cited source; inherited by the author (no direct observation of the underlying system)"
   },
   {
    "id": "C10b",
@@ -178,7 +204,9 @@
    "provenance_tier": "TERTIARY",
    "source_url": "https://dune.com/assafian/farcaster",
    "notes": "Crypto-market-coupled audience; comparison-class limit for non-tokenized design.",
-   "cell_of": "C10"
+   "cell_of": "C10",
+   "witness_type": "inherited",
+   "measurement_note": "measured and reported by the cited source; inherited by the author (no direct observation of the underlying system)"
   },
   {
    "id": "C11a",
@@ -191,7 +219,9 @@
    "provenance_tier": "SECONDARY_PRESS",
    "source_url": "https://www.thewrap.com/bluesky-users-surge-after-post-election-bump/",
    "notes": "DISAGREES with C13 across firms (~2x); never average or trend-mix.",
-   "cell_of": "C11"
+   "cell_of": "C11",
+   "witness_type": "inherited",
+   "measurement_note": "measured and reported by the cited source; inherited by the author (no direct observation of the underlying system)"
   },
   {
    "id": "C11b",
@@ -204,7 +234,9 @@
    "provenance_tier": "SECONDARY_PRESS",
    "source_url": "https://www.thewrap.com/bluesky-users-surge-after-post-election-bump/",
    "notes": "DISAGREES with C13 across firms (~2x); never average or trend-mix.",
-   "cell_of": "C11"
+   "cell_of": "C11",
+   "witness_type": "inherited",
+   "measurement_note": "measured and reported by the cited source; inherited by the author (no direct observation of the underlying system)"
   },
   {
    "id": "C12a",
@@ -217,7 +249,9 @@
    "provenance_tier": "SECONDARY_PRESS",
    "source_url": "https://techcrunch.com/2025/01/06/bluesky-bump-from-x-exodus-is-slowing-down-data-shows/",
    "notes": "",
-   "cell_of": "C12"
+   "cell_of": "C12",
+   "witness_type": "inherited",
+   "measurement_note": "measured and reported by the cited source; inherited by the author (no direct observation of the underlying system)"
   },
   {
    "id": "C12b",
@@ -230,7 +264,9 @@
    "provenance_tier": "SECONDARY_PRESS",
    "source_url": "https://techcrunch.com/2025/01/06/bluesky-bump-from-x-exodus-is-slowing-down-data-shows/",
    "notes": "",
-   "cell_of": "C12"
+   "cell_of": "C12",
+   "witness_type": "inherited",
+   "measurement_note": "measured and reported by the cited source; inherited by the author (no direct observation of the underlying system)"
   },
   {
    "id": "C13a",
@@ -243,7 +279,9 @@
    "provenance_tier": "SECONDARY_PRESS",
    "source_url": "https://www.forbes.com/sites/conormurray/2025/11/07/bluesky-user-growth-has-dropped-nearly-40-new-report-says/",
    "notes": "Panel disagrees with C11; never trend-mix across firms.",
-   "cell_of": "C13"
+   "cell_of": "C13",
+   "witness_type": "inherited",
+   "measurement_note": "measured and reported by the cited source; inherited by the author (no direct observation of the underlying system)"
   },
   {
    "id": "C13b",
@@ -256,7 +294,9 @@
    "provenance_tier": "SECONDARY_PRESS",
    "source_url": "https://www.forbes.com/sites/conormurray/2025/11/07/bluesky-user-growth-has-dropped-nearly-40-new-report-says/",
    "notes": "Panel disagrees with C11; never trend-mix across firms.",
-   "cell_of": "C13"
+   "cell_of": "C13",
+   "witness_type": "inherited",
+   "measurement_note": "measured and reported by the cited source; inherited by the author (no direct observation of the underlying system)"
   },
   {
    "id": "C13c",
@@ -269,7 +309,9 @@
    "provenance_tier": "SECONDARY_PRESS",
    "source_url": "https://www.forbes.com/sites/conormurray/2025/11/07/bluesky-user-growth-has-dropped-nearly-40-new-report-says/",
    "notes": "Panel disagrees with C11; never trend-mix across firms.",
-   "cell_of": "C13"
+   "cell_of": "C13",
+   "witness_type": "inherited",
+   "measurement_note": "measured and reported by the cited source; inherited by the author (no direct observation of the underlying system)"
   },
   {
    "id": "C13d",
@@ -282,7 +324,9 @@
    "provenance_tier": "SECONDARY_PRESS",
    "source_url": "https://www.forbes.com/sites/conormurray/2025/11/07/bluesky-user-growth-has-dropped-nearly-40-new-report-says/",
    "notes": "Panel disagrees with C11; never trend-mix across firms.",
-   "cell_of": "C13"
+   "cell_of": "C13",
+   "witness_type": "inherited",
+   "measurement_note": "measured and reported by the cited source; inherited by the author (no direct observation of the underlying system)"
   },
   {
    "id": "C13e",
@@ -295,7 +339,9 @@
    "provenance_tier": "SECONDARY_PRESS",
    "source_url": "https://www.forbes.com/sites/conormurray/2025/11/07/bluesky-user-growth-has-dropped-nearly-40-new-report-says/",
    "notes": "Panel disagrees with C11; never trend-mix across firms.",
-   "cell_of": "C13"
+   "cell_of": "C13",
+   "witness_type": "inherited",
+   "measurement_note": "measured and reported by the cited source; inherited by the author (no direct observation of the underlying system)"
   },
   {
    "id": "C14",
@@ -307,7 +353,9 @@
    "date_of_data": "study window Aug 2023 - Feb 2025, published 2025-04",
    "provenance_tier": "SECONDARY_ACADEMIC",
    "source_url": "https://arxiv.org/abs/2504.12902",
-   "notes": "Qualitative; no figure."
+   "notes": "Qualitative; no figure.",
+   "witness_type": "inherited",
+   "measurement_note": "measured and reported by the cited source; inherited by the author (no direct observation of the underlying system)"
   },
   {
    "id": "I1",
@@ -317,7 +365,8 @@
    "value": "C1 vs C5-like figures; C8",
    "alternatives_preserved": "NOT a common multiplier: definitions and dates differ per system; 7.6%-12% are per-system ratios, not a shared law.",
    "provenance_tier": "DERIVED",
-   "notes": "Interpretation over sourced counts; not itself a count."
+   "notes": "Interpretation over sourced counts; not itself a count.",
+   "witness_type": "inherited"
   },
   {
    "id": "I2",
@@ -327,7 +376,8 @@
    "value": "0.056% ever migrated (C4); 0.299% strong identity control (C7)",
    "alternatives_preserved": "rare use != low value (insurance is rarely exercised); tool-driven growth in C7 suggests latent demand unlocked by UX; measurement window misses early-adopter eras.",
    "provenance_tier": "DERIVED",
-   "notes": ""
+   "notes": "",
+   "witness_type": "inherited"
   },
   {
    "id": "I3",
@@ -337,7 +387,8 @@
    "value": "C9",
    "alternatives_preserved": "one case; other growth episodes (invite-era, Threads competition) not yet examined; does not establish growth is GENERALLY shock-driven.",
    "provenance_tier": "DERIVED",
-   "notes": ""
+   "notes": "",
+   "witness_type": "inherited"
   },
   {
    "id": "I4",
@@ -347,7 +398,8 @@
    "value": "untested",
    "alternatives_preserved": "portability as enterprise/creator insurance; federation as moderation-layer market; protocol neutrality as regulatory positioning.",
    "provenance_tier": "AUTHOR",
-   "notes": "Candidate, not a defensible-claim verdict."
+   "notes": "Candidate, not a defensible-claim verdict.",
+   "witness_type": "inherited"
   },
   {
    "id": "A1",
@@ -357,7 +409,8 @@
    "value": "OPEN - no located evidence isolates non-shock choice of federated features specifically",
    "alternatives_preserved": "located growth episodes are all shock/wave-coupled (C9, C12, C14); people chose Bluesky-the-app, not federation.",
    "provenance_tier": "AUTHOR",
-   "notes": "Research gate in paper ch08 8.9. Test: Bluesky non-shock cohort retention; Mastodon instance-level migration episodes with known non-shock causes."
+   "notes": "Research gate in paper ch08 8.9. Test: Bluesky non-shock cohort retention; Mastodon instance-level migration episodes with known non-shock causes.",
+   "witness_type": "inherited"
   },
   {
    "id": "A2",
@@ -367,7 +420,8 @@
    "value": "OPEN - awaits Jan-2027 census in Rob Ricci's series",
    "alternatives_preserved": "",
    "provenance_tier": "AUTHOR",
-   "notes": "Next-census check."
+   "notes": "Next-census check.",
+   "witness_type": "inherited"
   }
  ]
 }
