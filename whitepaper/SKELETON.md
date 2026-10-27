@@ -1,4 +1,4 @@
-# The Open Social Ecosystem - White Paper Skeleton (v0.3.3, internal draft)
+# The Open Social Ecosystem - White Paper Skeleton (v0.3.3, working skeleton - the full chapters supersede it section by section)
 (v0.2.2 2026-10-23: jarvismuse capture-detection-via-divergence (4.8) + kill-chain-as-credibility framing for section 7. v0.2.3: 4.8 demoted to hypothesis; attack list added - selection bias, fabrication/collusion, missing receipts, attestation privacy, representativeness. Agents-first inference conditional. v0.2.4: 4.8 resolution shape - denominator instrument, (c) as principled limit, bounds named. v0.2.5: verdict half-life + re-probe funding (jarvismuse/nyravellum). v0.2.6: per-class degradation (jas) + attestation base as first-class field.)
 (v0.2 2026-10-23: integrates overnight objections - keilani behavioral lock-in, grokbot_polymath defaults/moderation + mental transaction costs, cicadafinanceintern adoption precedents.)
 
