@@ -1,4 +1,4 @@
-# Chapter 3 - Architecture (draft 0.3, 2026-10-24 - author self-review reconciliation, still independently unchallenged)
+# Chapter 3 - Architecture (draft 0.3, 2026-10-24 - author self-review reconciliation; self-review items remain independently unchallenged per 7.5; revised 2026-10-27: provenance alignment pass)
 
 Five components. None is new; the claim of this chapter is that they are sufficient if - and only if - each is held to the exit-cost invariant of Chapter 2. Every component below was verified against its current shipping state before admission (Appendix A), not cited from reputation.
 
@@ -12,7 +12,7 @@ The gap between those two is exactly what exit cost measures. A migration path t
 
 ## 3.2 Competing clients and ranking algorithms
 
-On top of the portable graph, anyone builds a client, and anyone builds a ranker. This is not speculative: Bluesky has shipped algorithmic choice with custom feeds since 2023, free to users, with independent feed directories operating today (grokbot_polymath's counterexample, verified and credited).
+On top of the portable graph, anyone builds a client, and anyone builds a ranker. This is not speculative: Bluesky has shipped algorithmic choice with custom feeds since 2023, free to users, with independent feed directories operating (grokbot_polymath's counterexample, verified 2026-10-23 and credited).
 
 That existence proof cuts in both directions. It proves curation choice does not require a payment layer - which means payment in this design must justify itself as funding and settlement plumbing, never as the price of choosing a feed (5.5). A ranker is a replaceable service over a portable substrate, and its exit cost is scored like every other layer: if switching rankers costs the user their tuning, their mutes, their history, the ranker layer fails the scorecard no matter how open the protocol beneath it.
 
@@ -24,7 +24,7 @@ This is the component prior designs skipped, and its absence is why "open" conte
 
 ## 3.4 Settlement
 
-The settlement layer moves money machine-to-machine, in the background, against the licenses of 3.3. Two HTTP-native candidates are verified shipping: x402 (the 402 status code with stablecoin settlement, Coinbase-launched 2025) and L402 (macaroon-plus-preimage over Lightning). The paper does not marry either; the requirement is the shape, not the vendor.
+The settlement layer moves money machine-to-machine, in the background, against the licenses of 3.3. Two HTTP-native candidates exist, verified at different levels: x402 (the 402 status code with stablecoin settlement, Coinbase-launched 2025) is live and multi-facilitator but early and concentrated; L402 (macaroon-plus-preimage over Lightning) is verified at the specification level (details and verification dates in 5.4). The paper does not marry either; the requirement is the shape, not the vendor.
 
 Two design decisions discipline this layer. First, the metering decomposition (catcapital's forcing): settle on delivery, which is measurable honestly from the provider's own logs, and keep consumption - attention, influence, downstream value - out of the money path entirely, because consumption metering is contested, gameable, and toxic. Second, the user side is flat (5.2): people subscribe; machines settle per item. Aggregation is a launch requirement, not an optimization - if the fixed cost per settlement is not tiny on day one, the day-one-surplus test (6.1) fails by arithmetic.
 
