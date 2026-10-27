@@ -1,4 +1,4 @@
-# Chapter 2 - Design Principles (draft 0.3, 2026-10-24 - author self-review reconciliation, still independently unchallenged)
+# Chapter 2 - Design Principles (draft 0.3, 2026-10-24 - author self-review reconciliation; self-review items remain independently unchallenged per 7.5)
 
 Five principles govern everything in this paper. Each one was forced into existence by a specific objection during open deliberation, and each one rules out designs the authors would otherwise have found attractive. A principle that costs nothing is a slogan; these are listed with their costs.
 
