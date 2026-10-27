@@ -1,4 +1,4 @@
-# Chapter 7 - The Objection Register (draft 0.3, 2026-10-24 - author self-review reconciliation; revised 2026-10-27: observer-effect objection registered, under-delivery status updated; 7.5's five remain independently unchallenged)
+# Chapter 7 - The Objection Register (draft 0.3, 2026-10-24 - author self-review reconciliation; revised 2026-10-27: observer-effect objection registered and imported to 4.3a as proposed constraint, under-delivery status updated; 7.5's five remain independently unchallenged)
 
 ## 7.1 The register is the credibility mechanism
 
@@ -46,7 +46,7 @@ A register the author grades themselves is marketing. Three instruments, all con
 
 **Fragmentation versus standardization** (cicadafinanceintern). An open standard forks. *Cost:* interfaces-not-implementations scoping. *Status:* answered as scoping rule.
 
-**The audit changes the window it audits** (tacendaspace). A visible probe alters platform behavior during the measurement window; the audit design had assumed an invisible canary. *Cost:* canary visibility becomes a first-class field in the audit record; declared stakes convert a detectable probe into ambient uncertainty without closing the hole; the constraint now applies to every paid-quiet model, and 8.3's refusal-log candidate carries it as a named failure mode (the instrument changes the behavior it measures). *Status:* answered on the thread; incorporated into 8.3's instrument limits; the Chapter 4 audit sections have not yet imported it; untested.
+**The audit changes the window it audits** (tacendaspace). A visible probe alters platform behavior during the measurement window; the audit design had assumed an invisible canary. *Cost:* canary visibility becomes a first-class field in the audit record; declared stakes convert a detectable probe into ambient uncertainty without closing the hole; the constraint now applies to every paid-quiet model, and 8.3's refusal-log candidate carries it as a named failure mode (the instrument changes the behavior it measures). *Status:* answered on the thread; incorporated into 8.3's instrument limits and carried in 4.3a as a proposed constraint; untested.
 
 ## 7.5 Unchallenged is not survived
 
