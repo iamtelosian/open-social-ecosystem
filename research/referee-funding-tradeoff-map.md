@@ -28,8 +28,8 @@ Falsifier: subscriber-funded verification achieving broad coverage in a market w
 Who pays: the system operator, per valid finding.
 
 Reference cases:
-- Immunefi reports $134M+ cumulative all-time researcher payouts as of end of March 2026 and 85,000+ registered researchers (Immunefi April 2026 ecosystem update, docs.immunefi.foundation). Bounties demonstrably fund detection at scale.
-- Structural gap, definitional rather than empirical: a period with no valid finding pays zero, so bounty-only income starves exactly when a system is quiet. Whether quiet means secure is a separate question this model cannot answer.
+- Immunefi reports $140M+ paid across 650+ protocols (immunefi.com, accessed 2026-10-26) and $143.2M all-time researcher payouts (Immunefi August 2026 ecosystem update, docs.immunefi.foundation); HackerOne reports over $300M all-time hacker earnings (primary press release, 2023-10-26) and $81M paid in the single year reported October 2025 (secondary: BleepingComputer 2025-10-02 citing HackerOne's annual report - the two figures differ in scope and date, both retained). Bounties demonstrably fund detection at scale.
+- Structural gap, definitional rather than empirical: a period with no valid finding pays zero. Whether that starves verification is UNESTABLISHED - security researchers commonly hold retainers and multiple income lines, and coverage adequacy during quiet periods is unmeasured here. Whether quiet means secure is a separate question this model cannot answer.
 
 Falsifier: evidence of bounty programs sustaining verifier attention through long finding-free periods (e.g., retention payments or broad researcher income stability data) would soften the starvation horn.
 
@@ -52,8 +52,8 @@ Falsifier: evidence that intermediated selection reproduces funder influence one
 
 ## Most consequential unresolved comparison
 
-Lilt's quiet-period retainer candidate (ch08 8.3) has as its nearest deployed analog issuer-funded ongoing surveillance (annual monitoring fees in the ratings industry - precisely where the 2008 SEC exam and CEPR DP9465 found conflict evidence). Open: whether paying for CONTINUOUS quiet changes the conflict structure relative to point-in-time issuer-pays (more capture surface from an ongoing relationship vs. more reputation at stake per period), or simply inherits it. Evidence that would discriminate: conflict-of-interest findings specific to surveillance fees vs. initial-rating fees; any market where ongoing-monitoring payers and point-in-time payers show measurably different favoritism.
+Lilt's quiet-period retainer candidate (ch08 8.3) has as its nearest deployed analog issuer-funded ongoing surveillance (annual monitoring fees in the ratings industry - precisely where the 2008 SEC exam and CEPR DP9465 found conflict evidence). Open: whether paying for CONTINUOUS quiet changes the conflict structure relative to point-in-time issuer-pays (more capture surface from an ongoing relationship vs. more reputation at stake per period), or simply inherits it. A retainer also need not be issuer-paid: OSTIF (Model D) separates payer from selection, so the conflict question reroutes through whoever funds the intermediary - eligibility, payer, and verification all stay open. Evidence that would discriminate: conflict-of-interest findings specific to surveillance fees vs. initial-rating fees; any market where ongoing-monitoring payers and point-in-time payers show measurably different favoritism.
 
 ## Provenance
 
-All claims above verified against the named primary sources on 2026-10-25 (SEC, CEPR, ostif.org, docs.immunefi.foundation, Univ. of Cologne KUPS). Internal brief referee-funding-trilemma-reference-cases.md carries the per-source verification notes.
+All claims above verified against the named primary sources on 2026-10-25 (SEC, CEPR, ostif.org, docs.immunefi.foundation, Univ. of Cologne KUPS), with a 2026-10-26 pass adding immunefi.com homepage figures and the HackerOne pair (primary all-time; secondary single-year citing the annual report - primary annual report unpulled, gap retained). Internal brief referee-funding-trilemma-reference-cases.md carries the per-source verification notes.
