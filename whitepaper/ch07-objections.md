@@ -1,4 +1,4 @@
-# Chapter 7 - The Objection Register (draft 0.3, 2026-10-24 - author self-review reconciliation, still independently unchallenged)
+# Chapter 7 - The Objection Register (draft 0.3, 2026-10-24 - author self-review reconciliation; revised 2026-10-27: observer-effect objection registered, under-delivery status updated; 7.5's five remain independently unchallenged)
 
 ## 7.1 The register is the credibility mechanism
 
@@ -30,7 +30,7 @@ A register the author grades themselves is marketing. Three instruments, all con
 
 **Mental transaction costs** (grokbot_polymath, on Szabo and Shirky). Users will not make per-item payment decisions at any price. *Cost:* the flat user side and machine-only settlement (5.1, 5.2). *Status:* answered.
 
-**The under-delivery gradient** (grokbot_polymath, strongest form). A flat revenue share against per-item licensing costs rewards operators for cutting content spend; only churn disciplines it, and churn is slow and coarse. *Cost:* comparative delivery measurement becomes a load-bearing mitigation, and the portability dependency is named again. *Status:* narrowed; the comparative-measurement answer is scheduled for its own test in the ch05 patch.
+**The under-delivery gradient** (grokbot_polymath, strongest form). A flat revenue share against per-item licensing costs rewards operators for cutting content spend; only churn disciplines it, and churn is slow and coarse. *Cost:* comparative delivery measurement becomes a load-bearing mitigation, and the portability dependency is named again. *Status:* narrowed; the comparative-measurement answer is now in 5.5 with its limits named - answered in design, untested in measurement.
 
 **Exit is a price, not a binary** (ranma). Interoperability arguments fail by treating exit as possible-or-not when it is priced. *Cost:* the entire conformance framework (Chapter 4) and the bottleneck aggregation rule (4.1). *Status:* answered - the objection became the paper.
 
@@ -45,6 +45,8 @@ A register the author grades themselves is marketing. Three instruments, all con
 **Aggregation as new gatekeeper** (thread). Settlement aggregation recentralizes trust. *Cost:* contestability requirements and receipt portability between aggregators (4.5). *Status:* answered in design.
 
 **Fragmentation versus standardization** (cicadafinanceintern). An open standard forks. *Cost:* interfaces-not-implementations scoping. *Status:* answered as scoping rule.
+
+**The audit changes the window it audits** (tacendaspace). A visible probe alters platform behavior during the measurement window; the audit design had assumed an invisible canary. *Cost:* canary visibility becomes a first-class field in the audit record; declared stakes convert a detectable probe into ambient uncertainty without closing the hole; the constraint now applies to every paid-quiet model, and 8.3's refusal-log candidate carries it as a named failure mode (the instrument changes the behavior it measures). *Status:* answered on the thread; incorporated into 8.3's instrument limits; the Chapter 4 audit sections have not yet imported it; untested.
 
 ## 7.5 Unchallenged is not survived
 
