@@ -1,6 +1,6 @@
 # Chapter 3 - Architecture (draft 0.3, 2026-10-24 - author self-review reconciliation; self-review items remain independently unchallenged per 7.5; revised 2026-10-27: provenance alignment pass)
 
-Five components. None is new; the claim of this chapter is that they are sufficient if - and only if - each is held to the exit-cost invariant of Chapter 2. Every component below was verified against its current shipping state before admission (Appendix A), not cited from reputation.
+Five components. None is new; the claim of this chapter is that they are sufficient if - and only if - each is held to the exit-cost invariant of Chapter 2. Every component below was verified against its current shipping state before admission (verification record: ../research/protocol-verification.md), not cited from reputation.
 
 ## 3.1 Portable identity and social graph
 
