@@ -20,7 +20,7 @@ The cost: some attractive claims are currently unassertable. The bootstrapping a
 
 ## 2.3 Reuse before inventing
 
-Reuse existing standards - AT Protocol, ActivityPub, Nostr, ODRL, x402, L402 - wherever they suffice. Each candidate named in this paper was verified against its current shipping state before admission (Appendix A), not cited from reputation.
+Reuse existing standards - AT Protocol, ActivityPub, Nostr, ODRL, x402, L402 - wherever they suffice. Each candidate named in this paper was verified against its current shipping state before admission (verification record: ../research/protocol-verification.md), not cited from reputation.
 
 The principle is not laziness; it is a bet about where novelty belongs. The failure taxonomy (Section 1.4) shows ecosystems dying from missing surplus and missing migration-coordination, not from missing protocol elegance. The new work in this paper is concentrated where the record says the gap is: the conformance framework, the contract layer, and the bootstrap path. Identity, federation, and payment transport are solved well enough to build on.
 
