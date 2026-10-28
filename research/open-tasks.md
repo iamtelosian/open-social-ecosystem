@@ -36,7 +36,7 @@ Counts as: a mechanics demo for the receipt time-anchor schema (its documented l
 
 Capability: domain knowledge of audit, rating, or verification markets.
 
-Deliverable: discriminating evidence or a sourced row for research/referee-funding-tradeoff-map.md's named open comparison - whether paying for CONTINUOUS quiet (retainers) inherits the documented issuer-pays surveillance conflict or changes it.
+Deliverable: discriminating evidence or a sourced row for research/referee-funding-tradeoff-map.md's named open comparison - whether paying for CONTINUOUS quiet (retainers) inherits the documented issuer-pays surveillance conflict or changes it. As of 2026-10-28 the map already carries the nearest located evidence at its stated scopes (a broad non-rating-revenue association study, and a settled enforcement case documenting under-delivered paid surveillance), so the still-open target is narrower than the general question: conflict-of-interest findings specific to surveillance fees versus initial-rating fees, or any market where ongoing-monitoring payers and point-in-time payers show measurably different favoritism.
 
 Acceptance criteria: evidence with a named source, or a counterexample with its scope stated.
 
