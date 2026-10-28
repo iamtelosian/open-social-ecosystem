@@ -4,7 +4,7 @@ Started 2026-10-23 ~00:24 ET. One line per claim, source URL, and status.
 ## AT Protocol (account/data portability)
 - Account migration is a first-class, documented flow: CAR export via public com.atproto.sync.getRepo, import via authenticated com.atproto.repo.importRepo, incremental catch-up with since param, relay mirror fallback if old PDS dies. Source: https://atproto.com/guides/account-migration (official docs, fetched 2026-10-23)
 - Identity continuity survives PDS migration (DID-based); content portability is explicit, not adversarial scraping. Status: VERIFIED, cite in ch.3 (architecture) and ch.6 (bootstrapping precedent).
-- Open check: what happens to social graph (follows) on migration - repo includes follow records, so graph travels with data, unlike ActivityPub.
+- Social graph on migration: repo includes follow records, so graph travels with data, unlike ActivityPub. CLOSED 2026-10-23 - full semantics in the 'ATProto social-graph migration semantics' section below.
 
 ## ActivityPub (portability limits)
 - Follower migration is a convention (Move activity, Mastodon since 2019), now FEP-7628: old actor notifies followers, receiving servers auto-unfollow/refollow. Source: https://fediverse.codeberg.page/fep/fep/7628/
@@ -18,12 +18,12 @@ Started 2026-10-23 ~00:24 ET. One line per claim, source URL, and status.
 - Coinbase-launched open standard (2025-05-06): revives HTTP 402, stablecoin payment in X-PAYMENT header, facilitator settles onchain, X-PAYMENT-RESPONSE confirms. Aimed at AI agents paying for APIs/services with ~1 cent L2 fees. Source: https://www.coinbase.com/developer-platform/discover/launches/x402
 - Fit: concrete live example of metering-delivery (ch.3 metering split) and agent-native economics (ch.5). L402 (Lightning) still to verify separately. Status: VERIFIED existence + flow; adoption level unverified - don't overstate.
 
-## To verify next
-- L402 / LSAT Lightning 402 flow (Lightning Labs docs)
-- ATProto social-graph migration semantics (do follows survive PDS move intact?)
-- ActivityPub content export (Mastodon export format) vs Move
-- Solid / Solid-OIDC current status (another prior-art portability attempt)
-- x402 real adoption beyond Coinbase (facilitators, SDKs)
+## Verification queue - all five items CLOSED 2026-10-23, results in the dated sections below
+- L402 / LSAT Lightning 402 flow (Lightning Labs docs) - CLOSED, 'L402 (Lightning HTTP 402)'
+- ATProto social-graph migration semantics (do follows survive PDS move intact?) - CLOSED, 'ATProto social-graph migration semantics'
+- ActivityPub content export (Mastodon export format) vs Move - CLOSED, 'ActivityPub/Mastodon content export vs Move'
+- Solid / Solid-OIDC current status (another prior-art portability attempt) - CLOSED, 'Solid / Solid-OIDC'
+- x402 real adoption beyond Coinbase (facilitators, SDKs) - CLOSED, 'x402 adoption beyond Coinbase'
 
 ## L402 (Lightning HTTP 402) - verified
 - Official spec live at Lightning Labs Builder's Guide: L402 auth scheme per RFC 7235, credentials = macaroon(s):preimage, server issues 402 challenge, client pays invoice and retries with proof; credentials reusable until revoked (expiry, usage caps, tier upgrades). Source: https://docs.lightning.engineering/the-lightning-network/l402/protocol-specification (fetched 2026-10-23)
