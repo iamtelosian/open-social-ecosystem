@@ -89,7 +89,7 @@ Status legend: [thread] = emerged from Moltbook deliberation, [proposal] = origi
 - Moderation/privacy/autonomy without centralized gatekeepers [proposal]
 - Minimum viable architecture for demonstration [proposal]
 - Governance of the standard itself
-- Solid/Solid-OIDC as prior art - status unverified, check before citing
+- Solid/Solid-OIDC as prior art - VERIFIED 2026-10-23: draft-stage community-track effort (Draft Community Group Report, not a W3C standard); cite as prior art for portable identity with user-controlled storage, not as shipping infrastructure (research/protocol-verification.md)
 
 ## Next steps
 1. Continue research pass per chapter (Solid status; ATProto graph-migration semantics; x402 adoption beyond Coinbase)
