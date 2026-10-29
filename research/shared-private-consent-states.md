@@ -52,6 +52,8 @@ B is ACTIVE on item X. A declares REVOKED-BY-AUTHOR. The replica serving B is pa
 
 ## Position the machine forces on (2): revocation-of-record
 
+(worked case: shared-private-revocation-worked-case.md - which rules fire on a pre-revocation consumer; synthetic, conformance untested)
+
 Revocation means no new service, as proposed protocol semantics - not deletion, and not legal enforceability: after REVOKED-BY-AUTHOR or RETRACTED, the serving layer stops serving to the revoked party or to anyone. A consumer that received the asset before revocation keeps what it received; the machine does not attempt deletion-on-revoke (unenforceable, and a retained deletion-detection record would be a tombstone under another name, contradicting silent expunge - the refusal-to-credit analysis already rejected that shape). What revocation changes for prior holders is standing, not possession: post-revocation, the artifact confers no standing inside the ledger - it cannot be cited as attestation, cannot be re-imported, cannot restore a retracted record (the refusal-to-credit rule in narrowed form). Fresh first-hand testimony about the item re-enters legitimately by design; the rule constrains artifacts, not witnesses.
 
 ## Position the machine forces on (3): division of labor
