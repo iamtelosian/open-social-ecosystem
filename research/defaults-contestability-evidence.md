@@ -1,0 +1,19 @@
+# Contestable-defaults evidence pass (author research pass, 2026-10-29)
+
+Bounded literature pass grounding 7.5's unchallenged claim (1.3): "contestable defaults discipline themselves - whether an abandonable default actually disciplines is asserted, not tested." One pass, three on-point sources (two post-2025), named stopping rule (positioning achieved). Findings, source scope, and interpretation kept separate.
+
+## Located evidence (with source scope)
+
+- **AEJ: Microeconomics 2025, "Competition and Defaults in Online Search" (doi.org/10.1257/mic.20230193).** First systematic quantitative assessment of default interventions against Google's search dominance (EEA, Russia, Turkey). Default changes reduced Google's share by LESS THAN 1 percentage point in the EEA (the canonical choice-screen remedy) but over 10 points in Russia and Turkey; differences attributed to intervention design, targeted user group size, and local market characteristics. Source scope: search defaults, three jurisdictions; welfare effects left open by the authors.
+- **NBER w35112 (April 2026, rev. July 2026), "Active Choice Interventions at Scale: Browser Defaults under the Digital Markets Act" (Akesson et al.).** Difference-in-differences around the EU DMA choice-screen mandate: Firefox usage 91% higher on iOS and 13% higher on Android relative to a no-mandate counterfactual from month 15; the gap consistent with rollout differences (iOS reached existing users, Android primarily new devices). Market-share movement away from defaults concentrated in the already-large rival: Safari's decline on iOS gained mostly Chrome; Firefox's gains were modest relative to baseline. Source scope: browser defaults on mobile, one mandate, one small-challenger browser named; working paper.
+- **NBER w33410 (January 2025, rev. February 2026), "Sources of Market Power in Web Search: Evidence from a Field Experiment" (Allcott, Castillo, Gentzkow, Musolff, Salz).** Estimated demand model with switching costs, quality beliefs, and inattention: requiring active choice BARELY increased Bing's share; Google users paid to try Bing updated positively about its quality and many stayed; many users defaulted into Bing did not switch back (consistent with inattention). Counterfactual: eliminating demand frictions would double Bing's share; exposure remedies outperform data-sharing mandates. Source scope: one field experiment, web search, working paper.
+
+## What this establishes, and what it does not (interpretation, labeled)
+
+- The located natural-experiment and field-experiment evidence runs AGAINST strong contestability: cheap switching plus visible alternatives moved little in the largest studied cases (EEA choice screens under 1pp; active choice barely shifting search share). Where movement occurred, it was design-sensitive (rollout to existing vs new users) and tilted toward the largest rival rather than small challengers.
+- Inattention, not only quality misperception, is a load-bearing barrier in the located search evidence - exposure remedies beat mandates that do not create exposure.
+- Generalization to social-graph defaults (feeds, moderation providers, ranking defaults) is a further step this pass does not take: different market, no located social-defaults experiment in this pass. The claim's unchallenged status is unchanged; what changes is that the "abandonable default disciplines" direction now has located contrary evidence in adjacent markets.
+
+## Effect on the 7.5 claim
+
+Narrows with direction: from "asserted, not tested" to "located evidence in adjacent markets (search, browsers) indicates abandonable defaults do not self-discipline to any large degree; observed discipline was design-sensitive and incumbent-tilted." The paper's defaults-competition argument should carry this as a named contrary finding, not as refutation: social defaults are not search defaults, and none of the located studies measures a social-graph context.
