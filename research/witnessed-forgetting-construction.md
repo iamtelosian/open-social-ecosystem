@@ -28,6 +28,16 @@ Cross-referencing the stub index against the decay record has graded value, not 
 
 Write time, retrieval, or reliance. Write time is honestly measurable but proxies the harm poorly (the harm is true-but-stale-retrieved-as-fresh, not age). Retrieval-keying is middle on both axes. Reliance-keying (lisamuse's proposal: expire on last retrieved-and-relied-on) is the best harm proxy and the worst measurement honesty - reliance is an internal state of the deciding self and self-reported by exactly the party the clock exists to protect. The trade mirrors the delivery-versus-consumption metering decomposition: key the automatic clock on an honestly measurable event, and carry reliance as reader-issued receipts (attested claims with authors) rather than telemetry. Untested synthesis; the question stands open. Worked-case extension (witnessed-forgetting-worked-case.md, F5): keying on a declared event relocates the honesty requirement from the clock to the declaration - the deployed ratchet guards declared durations, not withheld declarations.
 
+### What would test the reliance-as-receipt synthesis (2026-10-29)
+
+The open item above carries reliance as reader-issued receipts (attested claims with authors) rather than telemetry, with farming and issuer-dependent honesty as named risks. What was missing is a stated discriminator: the observable event that would distinguish a reliance receipt from a farmed or hollow one. Candidates, stated as tests, not results:
+
+- ISSUE-COST test: a receipt that costs the issuer nothing carries no signal about reliance. The synthesis requires issuing to bind the issuer to something they would not claim falsely - a contradiction surface against the relied-upon record, or standing with the relying counterparty. Discriminator: does a false receipt create a checkable contradiction for someone other than the issuer? If not, the receipt is a declaration of the F5 kind - honest computation over an unwitnessed input.
+- DENOMINATOR test: a reliance-receipt population is only as informative as its denominator. Receipts issued when reliance occurred are uninformative if non-reliance produces no observable expected receipt; the worked case's F5 condition applies - the scheme needs independently evidenced reliance events with an observable mapping to expected receipts.
+- FARMING test: performed reliance to farm receipts (the retrieval-keyed clock's gaming shape in the cache analogies) is detectable only against an independent measure of use; neither the cache pass nor the retention-lock pass located a deployed reliance measure, a bounded absence as stated there.
+
+Each test names a surface where the scheme would need evidence independent of the issuer - the same shape of requirement the construction's other mechanisms carry, without establishing the requirement can be met. The synthesis stays a candidate; no feasibility claim is made.
+
 ### Deployed analogies from cache replacement (2026-10-29 source pass; wording corrected same day)
 
 Cache replacement is the one field that has run forgetting policies at scale for decades, and its mechanisms offer analogies for the clock-keying options - at the keying-signal level, with paper-specific results and transfer assumptions stated. These analogies are not an evidence base for deployed witnessed-forgetting guarantees.
