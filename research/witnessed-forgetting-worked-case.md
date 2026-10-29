@@ -34,6 +34,27 @@ K deploys the construction with all three surfaces under its own control. Ids ar
 
 Under one keeper, every internal check passes F3. Each mechanism protects a boundary the attack does not cross: commit-reveal protects selection integrity, not population integrity; sequential ids protect issuance integrity, not retirement integrity; hash binding protects stub bytes, not stub existence; the cross-reference protects consistency, not coverage. F4, the zombie, leaves a reader-visible contradiction where F3 leaves none on the surfaces this case's roles can observe. That is an observability difference under this access model, not a demonstrated incentive ranking - which attack a rational keeper prefers would need an explicit payoff and cost model this case does not carry. F3 is caught by nothing on the surfaces these roles can observe; whether other evidence exists outside the case is not claimed. What fires is only the independent denominator: a witness outside the keeper who knows the retirement was due. Retirement silence is not verified forgetting - the same shape as the refusal log's "silence is not verified quiet," one level down.
 
+## Extension: a keeper-declared clock (2026-10-29)
+
+Status: same synthetic illustration, extended; every actor and event still invented. Motivation: the construction's open clock-keying item, read against the retention-lock analogy pass - which contributes deployed design shapes only, under that section's stated limits, and no evidence about logs. The earlier case's clock was store-attested time; here the expiry rule keys on a DECLARED EVENT instead, the deployed event-hold shape.
+
+Setup change: entry #45's rule is event-keyed: expire 30 days after event X is declared (the vendor-documented use shape: a business event such as contract completion). The declaration is written by whoever holds the declaring permission - here K. A ratchet of the deployed kind guards parameter changes: shortening a declared duration never moves an already-computed date earlier.
+
+- **F5 (clock starvation).** Event X occurs. K never declares it. The rule never fires, so no retirement is due on any surface: no stub expected, no record expected, nothing for a sample to land on. Unlike the zombie (F4), where a reader holding an authentic rule copy and an independent clock sees the contradiction on the face of the entry, here the entry presents no contradiction at all: the clock it points to has not started, and nothing on the entry says whether X happened.
+
+What fires:
+
+- Internal cross-reference, sampled audit, hash binding, gap detection: nothing. There is no retirement to suppress, because the triggering event was never admitted into the clock. Every mechanism that caught or failed F2-F4 sits downstream of declaration; F5 is upstream of all of them.
+- The deployed guards: the ratchet guards shortening a declared duration, not withholding a declaration; the policy-layer bounds on retention periods bound durations, not declaration timing. Neither touches F5.
+- Reader-side slices: a reader who suspects X occurred faces the reliance-keyed difficulty in event form - the due condition is an event history, and a retained copy of the entry does not supply it.
+- Independent denominator (W): F5 fires only for a W who directly knows X occurred - not merely that the entry exists - and can map X to an expected declaration, and the declaration to an expected expiry. The event-keyed clock is exactly as witnessable as its keying event. Write-time rules key on an event the store itself performed (issuance, internally cheap to witness); declared-event rules key on an event whose occurrence lives wherever X lives - and if X lives with the keeper, the clock is keeper-influenced in the strongest sense: honest computation over a withheld input.
+
+What the extension is for:
+
+- It names the failure the deployed guards do not cover: declaration withholding, which no clock-parameter guard touches.
+- It sharpens the construction's open item: the clock-keying question is not only honesty of measurement (write, retrieval, reliance) but witnessability of the keying event itself. Keying on a declared event relocates the honesty requirement from the clock to the declaration, and the witness requirement goes with it.
+- Scope: synthetic; the retention-lock analogies are vendor-documented design shapes, not evidence about any log; observability statements are under this case's access model, not an incentive ranking; no prevalence claim.
+
 ## What the case is for
 
 - It names the load-bearing assumption precisely: the construction detects adversarial suppression only when an eligible retirement is independently evidenced and observably mapped to expected records. Every other mechanism is a consistency check over keeper-authored surfaces - useful, and graded as such in the construction file, but not coverage.
