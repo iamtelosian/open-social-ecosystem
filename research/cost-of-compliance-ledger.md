@@ -37,12 +37,12 @@ Evidence standard: a number carries a source or an ASSUMPTION tag. A row of assu
 
 ## Funding-map dependency audit (2026-10-29)
 
-Which rows route through the funding map's witness-provisioning dilemma (referee-funding-tradeoff-map.md), and in what form. Routing a condition through the shared dependency does not discharge it; each row's requirements stand as stated on the row.
+Which rows route through the funding map's witness-provisioning dilemma (referee-funding-tradeoff-map.md), and in what form. This is an analytical dependency map - it states where dependencies would lie, not that they hold - and routing a condition through the shared dependency does not discharge it; each row's requirements stand as stated on the row.
 
 - R1 (publish methodology and receipts): the verdict condition is an audience that checks. This is an attention condition, weaker than R2's: casual inspection of published artifacts carries no retention duty and no funded-role requirement, so the provisioning dilemma applies only in its mildest form - someone must look. The bootstrap problem (6.6) applies on its own terms, not via the funding map.
 - R2 (append-only signed log): the shared dependency is stated on the row - funded watching is necessary but not sufficient; retention, actual checking, coverage, detection probability and response incentives stand separately. Nothing further routes.
-- R3 (independent re-runs): the graduation condition is event-based - one actual re-run by an incentive-uncorrelated re-runner - so the provisioning question reduces to a single actor's incentive and cost, not a population. The funding map's dilemma (who pays for watching as a standing duty) does not govern R3; a one-off funded re-run would still face the incentive-correlation guard, which funding can worsen rather than settle.
-- R4 (honest divergence reporting): the verdict condition is a response-incentive property - whether reporting is observably safe. This routes to the funding map's response horn (what happens to the one who reports), not to retention or coverage: no population of head-holders undoes a punished reporter.
+- R3 (independent re-runs): the graduation condition is an event criterion - one actual re-run under the stated access and method conditions - so under this criterion R3 does not require a standing watcher population. It does not reduce to a single actor's incentive: a funded one-off re-run still faces provisioning and selection problems (who is commissioned, from whose shortlist), and the re-run's occurrence does not establish incentive non-correlation, which the row's guard treats separately.
+- R4 (honest divergence reporting): the verdict condition is a response-incentive property - whether reporting is observably safe. Retaliation risk is distinct from R2's retention and coverage conditions, but not absolutely separable from funding: who funds the watched system can shape what happens to the one who reports. This routes toward the funding map's response horn as a dependency to examine, not a discharged requirement.
 
 ## How to contribute
 
