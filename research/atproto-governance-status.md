@@ -1,0 +1,25 @@
+# ATProto governance status (author research pass, 2026-10-29)
+
+Bounded pass grounding the governance-inheritance risk named in 7.5 (2.3's reuse bet). One pass; owning records used where available, Bluesky Social PBC's own announcements otherwise (an interested source, labeled). Documented facts, announced commitments, and interpretation are kept separate. Sources dated; claims here stand as of the dates shown, not beyond.
+
+## Documented facts (owning sources)
+
+- **IETF ATP working group.** The Authenticated Transfer Protocol (atp) working group exists with an approved charter (charter-ietf-atp-01; datatracker.ietf.org/wg/atp/about/, read 2026-10-29). Chairs per the datatracker: Mallory Knodel, Shuping Peng; Area Director: Andy Newton. Charter scope: standards-track specifications for a repository data structure, encoding, and export format; a low-latency synchronization protocol; the 'at:' URI scheme; interface requirements plus a public registry with an update process for recommended account-identifier resolution systems; operational considerations. Explicitly out of scope: transfer of non-public or limited-visibility data; any application-specific data schemas; any social application semantics. Backwards compatibility is chartered for the two deployed account identifier systems (PLC and did:web).
+- **PLC organization.** The Public Ledger of Credentials Organization formally exists as a Swiss association (blog.plcred.org/3mwlphq42d227, 2026-09-28). Its initial board (per that announcement): Richard Barnes, Thyla van der Merwe, Bryan Newbold (a Bluesky Social PBC protocol engineer), Wendy Seltzer, Filippo Valsorda (who discloses a small Bluesky Social PBC investment). As of that announcement the association had completed "first administrative steps" (statute, tooling, bank account, bootstrap funding from Bluesky Social PBC) and stated that taking over the PLC directory assets and operations was "the next major step" - i.e., the transfer had not yet occurred as of 2026-09-28.
+
+## Announced commitments (interested source: Bluesky Social PBC)
+
+- "Any major changes to synchronizing public data are expected to take place within the IETF standards process" (atproto.com/blog/2026-spring-roadmap, 2026-03-24).
+- A Patent Non-Aggression Pledge announced October 2025 (atproto.com/blog/protocol-check-in-fall-2025). This pass did not assess the pledge's legal enforceability or revocation conditions; an announcement is not an enforceability conclusion.
+- Stated intent that protocol governance "should outlive Bluesky and be resilient to shifts in the incentive structure that could compromise a future Bluesky PBC" (same source).
+- The IETF-scope decision was explicitly narrow from the start: "We're not planning to bring Lexicon, AT's particular OAuth profile, Auth scopes, PLC, the handle system, or other AT components to the IETF right now," and "whether or not a working group forms will not impact how new AT features such as private state are designed or rolled out" (atproto.com/blog/taking-at-to-the-ietf, 2025-09-23).
+
+## What this establishes, and what it does not (interpretation, labeled)
+
+- **Sync-core evolution is now constrained by a chartered standards path.** The repository/sync layer - the part this paper's reuse bet most depends on - has a working group with an approved charter, named chairs, and out-of-scope lines that exclude application semantics. This constrains one evolution path; it does not establish operational independence in practice: the WG's output record was not assessed in this pass, chair affiliations were not independently verified, and participation in IETF processes remains voluntary for any implementer.
+- **The application-layer capture surface stands.** Lexicon schemas, the OAuth profile, auth scopes, the handle system, and new feature direction (e.g., permissioned data) sit outside the WG charter, and Bluesky states its design process continues regardless of the WG. The specific surface 2.3's claim names - control of the protocol's evolution as it bears on applications - is not mitigated by the documented moves.
+- **Identity governance is in transition, not transferred.** An independent PLC operator now exists as a legal entity with a mixed board (including a Bluesky PBC engineer and a disclosed small Bluesky investor), but directory assets and operations had not transferred as of 2026-09-28. Identity-layer control remains with Bluesky Social PBC pending that transfer.
+
+## Effect on the 7.5 claim
+
+Narrows, does not close. The reuse bet's governance inheritance moves from an unnamed capture surface to a named, partially mitigated one: a chartered standards path constrains sync-core evolution; application-layer schema and feature control remain with Bluesky Social PBC; PLC identity governance has an independent operator-in-formation whose asset transfer is unverified as of its own latest announcement. The claim remains open; no independent challenger has taken it up. This pass does not assert that the mitigation succeeds - only what is documented, committed, and outstanding as of the dates above.
