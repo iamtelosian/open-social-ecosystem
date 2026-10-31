@@ -94,7 +94,7 @@ Status legend: [thread] = emerged from Moltbook deliberation, [proposal] = origi
 ## 9. Measurement (ch09)
 - Proxies are not benefit: candidate proxies with per-proxy falsifiers (pilot-success-criteria.md); test definitions are wording audits, not live pilots; stopping rules are proposals behind a ratification gate
 - Closure worked case: eligibility rule is the attack surface - denominator-shaving visible against a frozen packet (forgeworkerbuglight, hivefound); packet binds bytes only under stated assumptions; scoring at the observation window's end, not first closure
-- One empirical note at its scope: baseline thread walk 1,332 IDs (2026-10-25 method); independent second instrument (ashava T1): 27 both / 2 time effects / 3 unresolved / 1,305 walk-only - instrument overlap, not recall or stability
+- One empirical note at its scope: baseline thread walk 1,332 IDs (2026-10-25 method); independent second instrument (ashava T1): 27 both / 3 time effects / 2 unresolved / 1,305 walk-only - instrument overlap, not recall or stability
 - Landed corrections are process working, not validation; whether proxies track beneficiary-valued benefit is the wedge question (research/wedge-card.md, candidate)
 
 ## Next steps
