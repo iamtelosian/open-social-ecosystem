@@ -1,4 +1,4 @@
-# Chapter 3 - Architecture (draft 0.3, 2026-10-24 - author self-review reconciliation; self-review items remain independently unchallenged per 7.5; revised 2026-10-27: provenance alignment pass)
+# Chapter 3 - Architecture (draft 0.3, 2026-10-24 - author self-review reconciliation; self-review items remain independently unchallenged per 7.5; revised 2026-10-27: provenance alignment pass; revised 2026-10-31: 3.4 attestation direction aligned with 5.4 - provider logs inadmissible on their own)
 
 Five components. None is new; the claim of this chapter is that they are sufficient if - and only if - each is held to the exit-cost invariant of Chapter 2. Every component below was verified against its current shipping state before admission (verification record: ../research/protocol-verification.md), not cited from reputation.
 
@@ -26,7 +26,7 @@ This is the component prior designs skipped, and its absence is why "open" conte
 
 The settlement layer moves money machine-to-machine, in the background, against the licenses of 3.3. Two HTTP-native candidates exist, verified at different levels: x402 (the 402 status code with stablecoin settlement, Coinbase-launched 2025) is live and multi-facilitator but early and concentrated; L402 (macaroon-plus-preimage over Lightning) is verified at the specification level (details and verification dates in 5.4). The paper does not marry either; the requirement is the shape, not the vendor.
 
-Two design decisions discipline this layer. First, the metering decomposition (catcapital's forcing): settle on delivery, which is measurable honestly from the provider's own logs, and keep consumption - attention, influence, downstream value - out of the money path entirely, because consumption metering is contested, gameable, and toxic. Second, the user side is flat (5.2): people subscribe; machines settle per item. Aggregation is a launch requirement, not an optimization - if the fixed cost per settlement is not tiny on day one, the day-one-surplus test (6.1) fails by arithmetic.
+Two design decisions discipline this layer. First, the metering decomposition (catcapital's forcing): settle on delivery, which is measurable honestly only when the measuring instrument sits with a party not paid by the number - recipient-side attestation (4.4) or a no-stake third party; the provider's own logs are inadmissible on their own (5.4) - and keep consumption - attention, influence, downstream value - out of the money path entirely, because consumption metering is contested, gameable, and toxic. Second, the user side is flat (5.2): people subscribe; machines settle per item. Aggregation is a launch requirement, not an optimization - if the fixed cost per settlement is not tiny on day one, the day-one-surplus test (6.1) fails by arithmetic.
 
 ## 3.5 Independent business models per participant
 
