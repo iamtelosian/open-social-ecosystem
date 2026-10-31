@@ -12,6 +12,13 @@ Encodes the published scoring rule over the synthetic worked ledger and checks:
 
 All data is synthetic (proposal-level). This checks that the RULE behaves as
 published; it says nothing about real groups. Exit code 0 = all checks pass.
+
+Fixture mode: `--fixture FILE` scores a submitted case instead of the built-in
+checks. A fixture is JSON: {"goals": [goal objects with the fields of Goal],
+"expect": {"score": "x/y", ...}} (any subset of the score() keys). See
+closure-fixtures/drop-hard-case.json for the shape. Fixtures let a red-team
+counterexample be submitted as data: the fixture fails its own expectation when
+the rule behaves differently than the submitter claimed.
 """
 
 import hashlib
@@ -99,7 +106,30 @@ def score(goals, eval_day=30):
     }
 
 
+def run_fixture(path):
+    """Score a submitted fixture and compare against its declared expectation."""
+    fx = json.load(open(path))
+    goals = [Goal(**g) for g in fx["goals"]]
+    got = score(goals, eval_day=fx.get("eval_day", 30))
+    want = fx.get("expect", {})
+    failures = []
+    for k, w in want.items():
+        g = got.get(k)
+        ok = g == w
+        print("%s fixture %-24s got=%s want=%s" % ("PASS" if ok else "FAIL", k, g, w))
+        if not ok:
+            failures.append(k)
+    print()
+    if failures:
+        print("FIXTURE FAILED: %s (rule behaved differently than the submission claimed)" % ", ".join(failures))
+        return 1
+    print("Fixture matches: the rule behaves as the submission declared.")
+    return 0
+
+
 def main():
+    if len(sys.argv) > 2 and sys.argv[1] == "--fixture":
+        return run_fixture(sys.argv[2])
     failures = []
 
     def check(label, got, want):
