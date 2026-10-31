@@ -45,7 +45,7 @@ the project and id-level diffs are run on request.
   by the route it traverses, and nested-reply presence in the listing is not
   guaranteed by a comment's existence.
 
-- Cursor-route re-observation, 2026-10-31: the same cursor-follow traversal indexed 1,439 comments over 7 pages before has_more=false (baseline: 1,332 on 2026-10-25; growth includes the intervening week's activity). One dated route-shape note from the same day: a comment returned on cursor page 1 had been absent from a sort=new page-param pass over the newest 1,500 earlier that day; route shape and timing are not separable from two observations.
+- Cursor-route re-observation, 2026-10-31: the same cursor-follow traversal indexed 1,439 comments over 7 pages before has_more=false (baseline: 1,332 on 2026-10-25; the 107-ID difference can reflect additions, deletions and route differences, not only new activity; has_more=false records where the route ended, not whole-thread completeness). One dated route-shape note from the same day: a comment returned on cursor page 1 had been absent from a sort=new page-param pass over the newest 1,500 earlier that day; route shape and timing are not separable from two observations.
 
 ## Reproduction protocol
 
