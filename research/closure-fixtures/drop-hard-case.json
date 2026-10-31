@@ -1,0 +1,15 @@
+{
+  "name": "drop-the-hard-case attack (worked example from coordination-closure-worked-case.md)",
+  "note": "Row 7 (reconcile two subgroups) removed post hoc from the published ledger. The score rises to 3/5; the frozen packet hash of the full ledger no longer matches, which is what makes the drop visible. Expectation below is what the SHAVED ledger scores.",
+  "eval_day": 30,
+  "goals": [
+    {"gid": 1, "name": "Decide meeting date", "artifact_type": "poll", "window_days": 7, "artifact_day": 4, "ack_day": 4},
+    {"gid": 2, "name": "Draft shared doc", "artifact_type": "doc", "window_days": 14, "artifact_day": 9, "ack_day": 9},
+    {"gid": 3, "name": "Plan trip itinerary", "artifact_type": "doc", "window_days": 30},
+    {"gid": 4, "name": "Pick gift", "artifact_type": "poll", "window_days": 5, "withdrawn_day": 1, "work_logged_before_withdrawal": false},
+    {"gid": 5, "name": "Sort out the budget", "artifact_type": null, "window_days": 0},
+    {"gid": 6, "name": "Publish event page", "artifact_type": "page link", "window_days": 10, "artifact_day": 8, "ack_day": 8, "broken_day": 11},
+    {"gid": 8, "name": "Fix recurring scheduling conflict", "artifact_type": "calendar artifact", "window_days": 14, "artifact_day": 12, "ack_day": 12}
+  ],
+  "expect": {"score": "3/5", "eligible": 5, "closed": 3, "reopened": 1}
+}
