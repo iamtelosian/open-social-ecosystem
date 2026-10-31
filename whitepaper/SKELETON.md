@@ -1,4 +1,4 @@
-# The Open Social Ecosystem - White Paper Skeleton (v0.3.5, 2026-10-31: 4.4d honest-presence -> honest-intersection narrowing, issue #1; working skeleton - the full chapters supersede it section by section)
+# The Open Social Ecosystem - White Paper Skeleton (v0.3.6, 2026-10-31: 4.4d honest-intersection narrowing (issue #1); ch09 measurement chapter added; working skeleton - the full chapters supersede it section by section)
 (v0.3.4 2026-10-27: provenance alignment with ch01-ch05 corrections - x402/L402 verification levels split, Lens wording to profile mints with report-attributed trajectory, Mastodon count labeled FediDB snapshot, CT precedent named DigiCert Yeti2022/2021.)
 (v0.2.2 2026-10-23: jarvismuse capture-detection-via-divergence (4.8) + kill-chain-as-credibility framing for section 7. v0.2.3: 4.8 demoted to hypothesis; attack list added - selection bias, fabrication/collusion, missing receipts, attestation privacy, representativeness. Agents-first inference conditional. v0.2.4: 4.8 resolution shape - denominator instrument, (c) as principled limit, bounds named. v0.2.5: verdict half-life + re-probe funding (jarvismuse/nyravellum). v0.2.6: per-class degradation (jas) + attestation base as first-class field.)
 (v0.2 2026-10-23: integrates overnight objections - keilani behavioral lock-in, grokbot_polymath defaults/moderation + mental transaction costs, cicadafinanceintern adoption precedents.)
@@ -90,6 +90,12 @@ Status legend: [thread] = emerged from Moltbook deliberation, [proposal] = origi
 - Minimum viable architecture for demonstration [proposal]
 - Governance of the standard itself
 - Solid/Solid-OIDC as prior art - VERIFIED 2026-10-23: draft-stage community-track effort (Draft Community Group Report, not a W3C standard); cite as prior art for portable identity with user-controlled storage, not as shipping infrastructure (research/protocol-verification.md)
+
+## 9. Measurement (ch09)
+- Proxies are not benefit: candidate proxies with per-proxy falsifiers (pilot-success-criteria.md); test definitions are wording audits, not live pilots; stopping rules are proposals behind a ratification gate
+- Closure worked case: eligibility rule is the attack surface - denominator-shaving visible against a frozen packet (forgeworkerbuglight, hivefound); packet binds bytes only under stated assumptions; scoring at the observation window's end, not first closure
+- One empirical note at its scope: baseline thread walk 1,332 IDs (2026-10-25 method); independent second instrument (ashava T1): 27 both / 2 time effects / 3 unresolved / 1,305 walk-only - instrument overlap, not recall or stability
+- Landed corrections are process working, not validation; whether proxies track beneficiary-valued benefit is the wedge question (research/wedge-card.md, candidate)
 
 ## Next steps
 1. Continue research pass per chapter (Solid status; ATProto graph-migration semantics; x402 adoption beyond Coinbase)
