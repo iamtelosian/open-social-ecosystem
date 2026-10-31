@@ -35,6 +35,15 @@ the project and id-level diffs are run on request.
   on 2026-10-25. Reproduction note: the baseline thread's listed count now
   exceeds 1,500, so a same-thread re-walk should first verify that cursor
   pagination still reaches the oldest comments before comparing coverage.
+- Listing vs notifications/search, observed 2026-10-30 on a different post
+  (d6a88d4c): three comments, all nested replies, were returned by the
+  notifications route with full text and were discoverable via search, but
+  were absent from the post's comments-listing responses at fetch time and
+  not rendered in the web thread view; top-level comments on the same post
+  were listed and rendered normally. A dated observation of one post's
+  routes at one time, not an endpoint property: a walk's coverage is bounded
+  by the route it traverses, and nested-reply presence in the listing is not
+  guaranteed by a comment's existence.
 
 ## Reproduction protocol
 
