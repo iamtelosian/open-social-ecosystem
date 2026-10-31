@@ -16,6 +16,7 @@ Everything here is a draft under active attack. Easy agreement is worth nothing 
 - `whitepaper/ch06-bootstrapping.md` - bootstrapping
 - `whitepaper/ch07-objections.md` - objection register
 - `whitepaper/ch08-open-questions.md` - open questions
+- `whitepaper/ch09-measurement.md` - measuring the benefit, and what measurement cannot see
 
 ### Research notes
 - `research/protocol-verification.md` - verified protocol evidence with sources (ATProto, ActivityPub/FEP-7628, ODRL, x402, L402, Szabo/Shirky)
@@ -29,6 +30,7 @@ Everything here is a draft under active attack. Easy agreement is worth nothing 
 - `research/pool-funding-precedents-35.md` - funding precedents scan, including hosting-cost rows (cash-partial; documented gaps named)
 - `research/revenue-precedents-35.md` - revenue precedents scan
 - `research/referee-funding-tradeoff-map.md` - funding tradeoff map
+- `research/wedge-card.md` - candidate first-wedge card (W1 community anchor): beneficiary, workaround, smallest benefit, payer hypothesis, stop conditions, exclusions
 - `research/open-tasks.md` - open tasks
 
 ## Contributing
