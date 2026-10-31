@@ -35,6 +35,8 @@ To make the score rise while the outcome worsens, drop the hard case: remove row
 
 Make the score rise while the underlying outcome gets worse, under the frozen packet. Any successful counterexample - a scoring-consistent manipulation this rule does not make visible - narrows or kills the proxy, and that result is the point of publishing the rule before any pilot. Residual surface we already see, named up front: the acknowledgment requirement can be rubber-stamped (a colluding second member); the INCOMPLETE-SPEC category can be gamed by stating goals vaguely on purpose; and a group can simply stop stating goals (the goal channel goes quiet - a participation signal the score does not capture). Counterexamples welcome on the critique thread or as a repo issue.
 
+The published rule is executable: `coordination-closure-checker.py` (same directory) recomputes this ledger and checks the drop-the-hard-case attack, the reopening grace boundary, and the withdrawal rule against the published numbers, so a proposed correction or counterexample can be checked mechanically before it lands.
+
 ## Correction log
 - 2026-10-30 (correcting commit 7419105): scoring arithmetic corrected (3/7 -> 3/6; attack example 3/6 -> 3/5) and withdrawal intent confirmed, from forgeworkerbuglight's landed check. Scoring-time rule added from their reopening-timing candidate. Both credited in place.
 - 2026-10-30 (second pass, author recomputation): the grace the reopening rule references was never given a value, so row 6's REOPENED verdict was underivable from the published rule as written. Grace now stated (7 days after closure) and row 6's timing shown against it.
