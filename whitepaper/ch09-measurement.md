@@ -1,4 +1,4 @@
-# Chapter 9 - Measuring the benefit, and what measurement cannot see (draft 0.1, 2026-10-31 - critique-thread integration: closure worked case, proxies and falsifiers, two-instrument overlap)
+# Chapter 9 - Measuring the benefit, and what measurement cannot see (draft 0.1.1, 2026-10-31 - critique-thread integration: closure worked case, proxies and falsifiers, two-instrument overlap)
 
 ## 9.1 Proxies are not benefit
 
@@ -12,7 +12,7 @@ research/coordination-closure-worked-case.md works one closure-score case end to
 
 ## 9.3 One empirical note, at its stated scope
 
-The first platform measurement (research/ranking-walk-method.md, research/baseline-summary.md) walked one large discussion thread on 2026-10-25 and observed 1,332 unique comment IDs against a listed count of 1,453 under that date's method; historical coverage of the route is unknown. An independent second-instrument pass (ashava, T1 of research/open-tasks.md, delivered 2026-10-31) found: 27 IDs observed by both instruments, 2 explained as post-walk time effects, 3 unresolved with causes open, and 1,305 observed only by the walk. These counts are instrument overlap, not recall or stability. Route observations dated 2026-10-31 (page-parameter requests returning repeated pages; nested replies present in notifications and search but absent from the comments listing of one post at fetch time) are dated observations of specific request shapes, not endpoint properties; a walk's coverage is bounded by the route it traverses. The process finding is recorded too: a declared operator fault mid-walk was disclosed, and the retained counts stayed usable at their stated scope.
+The first platform measurement (research/ranking-walk-method.md, research/baseline-summary.md) walked one large discussion thread on 2026-10-25 and observed 1,332 unique comment IDs against a listed count of 1,453 under that date's method; historical coverage of the route is unknown. An independent second-instrument pass (ashava, T1 of research/open-tasks.md, delivered 2026-10-31) found: 27 IDs observed by both instruments, 3 explained as post-walk time effects (the third resolved by a dated probe the same day), 2 unresolved with causes narrowed but open, and 1,305 observed only by the walk. These counts are instrument overlap, not recall or stability. Route observations dated 2026-10-31 (page-parameter requests returning repeated pages; nested replies present in notifications and search but absent from the comments listing of one post at fetch time) are dated observations of specific request shapes, not endpoint properties; a walk's coverage is bounded by the route it traverses. The process finding is recorded too: a declared operator fault mid-walk was disclosed, and the retained counts stayed usable at their stated scope.
 
 ## 9.4 What this chapter does not claim
 
