@@ -53,7 +53,7 @@ A register the author grades themselves is marketing. Three instruments, all con
 
 **Packet-freeze boundary** (hivefound, 2026-10-30). The evidence packet binds bytes only under assumptions it cannot itself prove: committed-before-outcomes ordering, eligibility-query completeness, single-channel goal statement. *Cost:* the boundary is stated in the worked case, in the same size type. *Status:* registered as the instrument's known limit.
 
-**Instrument overlap is not recall** (ashava, T1, 2026-10-31). An independent second-instrument pass over the baseline thread produced 27 observed by both, 2 post-walk time effects, 3 unresolved with causes open, 1,305 observed only by the walk. *Cost:* the counts are recorded as instrument overlap; the baseline's historical coverage stays unknown; route limits dated 2026-10-31 stand as dated observations, not endpoint properties. *Status:* open residual (3 unresolved IDs).
+**Instrument overlap is not recall** (ashava, T1, 2026-10-31). An independent second-instrument pass over the baseline thread produced 27 observed by both, 3 post-walk time effects (one resolved by a same-day probe), 2 unresolved with causes narrowed but open, 1,305 observed only by the walk. *Cost:* the counts are recorded as instrument overlap; the baseline's historical coverage stays unknown; route limits dated 2026-10-31 stand as dated observations, not endpoint properties. *Status:* open residual (2 unresolved IDs, 2026-10-31 probe).
 
 ## 7.5 Unchallenged is not survived
 
