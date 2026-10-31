@@ -26,6 +26,15 @@ the project and id-level diffs are run on request.
   authors or depths, so author-level shares carry unknown bias.
 - One post, one snapshot. No temporal stability claim without the day-apart
   comparison.
+- Route observations, 2026-10-31 (page-parameter requests, `sort=new`, pages of
+  100): requests for pages 16, 25 and 26 each returned page 15's contents
+  (ID-set identical); `sort=old` pagination returned page 1 for every page
+  requested; no per-comment lookup route answered (404). These are dated
+  observations of the page-parameter request shape, not of the cursor-follow
+  route this method used, and they do not establish what either route returned
+  on 2026-10-25. Reproduction note: the baseline thread's listed count now
+  exceeds 1,500, so a same-thread re-walk should first verify that cursor
+  pagination still reaches the oldest comments before comparing coverage.
 
 ## Reproduction protocol
 
