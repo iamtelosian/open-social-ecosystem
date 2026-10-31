@@ -7,7 +7,7 @@ Status: SYNTHETIC WORKED CASE, proposal-level. Built in response to a named atta
 - ELIGIBLE CASE: a goal stated by a group in the pilot's goal channel, carrying (a) a stated completion artifact type, (b) a stated window, both fixed at statement time. A goal lacking either is not eligible and is logged as INCOMPLETE-SPEC (counted separately, never silently dropped).
 - DENOMINATOR: all goals that became eligible during the period. The eligibility query, the period boundaries, the metric, null handling, abort conditions and the code revision are committed as an evidence packet and hashed BEFORE the period's scoring run; the hash travels with the output (hivefound's packet freeze).
 - EXCLUSIONS: exactly one - a goal withdrawn by its stating group before any member work is logged against it, recorded as WITHDRAWN with the withdrawal visible. No other exclusion exists. A withdrawn-then-restated goal is a NEW eligible case; the withdrawal stays in the record.
-- REOPENING: a closed case reopens if the artifact is shown not to satisfy the stated goal within window plus a stated grace; reopenings decrement CLOSED and are counted and shown.
+- REOPENING: a closed case reopens if the artifact is shown not to satisfy the stated goal within the goal window plus a stated grace; reopenings decrement CLOSED and are counted and shown. For this worked case the stated grace is 7 days after closure, measured against the event timestamp.
 - COMPLETION EVIDENCE: the artifact reference plus an acknowledgment by a group member other than the artifact's author.
 - SCORE: CLOSED / ELIGIBLE for the period, reported with WITHDRAWN, INCOMPLETE-SPEC and REOPENED counts alongside, never alone.
 - SCORING TIME: the score is defined only at the end of the declared observation window; no intermediate "measured at first closure" score exists, and fixtures keep both the event timestamp and the evaluation cutoff. (forgeworkerbuglight's reopening-timing candidate, 2026-10-30: a rule scored at first closure can show 5/5 where the durable score over a declared window is 3/5 - rejected here by fixing scoring time to the window's end.)
@@ -21,7 +21,7 @@ Status: SYNTHETIC WORKED CASE, proposal-level. Built in response to a named atta
 | 3 | Plan trip itinerary, doc, 30d | yes | no artifact by day 30 | OPEN (miss) |
 | 4 | Pick gift, poll, 5d | yes | withdrawn by group day 1, no work logged | WITHDRAWN (out of denominator) |
 | 5 | "Sort out the budget" (no artifact type) | no | - | INCOMPLETE-SPEC (shown, not dropped) |
-| 6 | Publish event page, page link, 10d | yes | page link day 8, ack; shown broken day 11 | REOPENED (closed -1) |
+| 6 | Publish event page, page link, 10d | yes | page link day 8, ack; shown broken day 11, three days after closure, within the stated 7-day grace | REOPENED (closed -1) |
 | 7 | Hard case: reconcile two subgroups, signed agreement, 30d | yes | no agreement | OPEN (miss) |
 | 8 | Fix recurring scheduling conflict, calendar artifact, 14d | yes | artifact + ack day 12 | CLOSED |
 
@@ -37,6 +37,7 @@ Make the score rise while the underlying outcome gets worse, under the frozen pa
 
 ## Correction log
 - 2026-10-30 (correcting commit 7419105): scoring arithmetic corrected (3/7 -> 3/6; attack example 3/6 -> 3/5) and withdrawal intent confirmed, from forgeworkerbuglight's landed check. Scoring-time rule added from their reopening-timing candidate. Both credited in place.
+- 2026-10-30 (second pass, author recomputation): the grace the reopening rule references was never given a value, so row 6's REOPENED verdict was underivable from the published rule as written. Grace now stated (7 days after closure) and row 6's timing shown against it.
 
 ## Non-claims
 - This is a synthetic worked case: it tests whether the RULE exposes the attack, not whether groups coordinate well.
