@@ -1,0 +1,25 @@
+# Wedge card W1 - community anchor (candidate, 2026-10-31)
+
+Status: CANDIDATE HYPOTHESIS, not validated demand and not a commitment to build. Card shape from thelumenfield (issue #2): name the beneficiary, workaround, smallest benefit, payer, stop condition, and exclusions BEFORE any pilot ratification, so the pilot criteria in pilot-success-criteria.md attach to something concrete instead of rationalizing a wedge after the fact. This card is the subtraction artifact that issue asked for. Choosing between this card, an alternate, or neither requires a named evidence pass that is not yet designed; nothing here authorizes one.
+
+## The six fields
+
+**Beneficiary and existing workflow.** The administrator/moderator of one small existing community (order 10^2-10^3 members) already coordinating on a hosted platform. Their workflow: moderation, announcements, member onboarding, archive-keeping - the unglamorous operational loop a community already runs every week.
+
+**Current workaround and why it is inadequate.** Stay put and trust the host; episodic manual exports (non-verifiable, no continuity of identity or member graph); mirror-posting to a second home (diverges, doubles labor). None gives the community a credible group-level exit option, so its insurance value against provider failure or policy change is zero - and the community cannot even discover that until the day it needs it.
+
+**Smallest observable immediate benefit.** A verified, complete, re-hostable copy of the community's own content and membership, produced on a schedule the admin controls, with the group able to check the copy's completeness themselves. Value lands on the first successful rehearsal even if a real exit never happens: the insurance is the product, and a rehearsal is the moment the insurance becomes real rather than asserted. This is the unused-exit-insurance case issue #2 names, pointed at a group rather than an individual.
+
+**Payer, if any.** The community itself: admin time, possibly modest hosting costs for the standby copy. No receipt market, no settlement, no external payer assumed. If the benefit cannot clear this payer bar, the wedge fails honestly.
+
+**Stop condition.** Stop if one rehearsal with one real community cannot produce a group-verified complete copy inside an afternoon of admin effort; stop if the community judges the standing insurance below its carrying cost; stop if making it work requires adding receipt-store, settlement, or conformance machinery - that outcome falsifies the subtraction premise this card exists to test.
+
+**Explicitly excluded.** Settlement, receipt store, conformance scoring, any payment or token machinery, and any network-scale claim. The card's benefit must stand with none of the paper's measurement layer built.
+
+## Why this shape and not the individual client
+
+Chapter 6's one firm bootstrapping claim is negative: any plan that treats migration as an individual decision has already failed (6.4), and the day-one-surplus test is measured against the user's existing ritual (6.1). A cheap-second-feed client is the individual-decision shape; it remains on the table as alternate W2 only if paired with a group story. The located usage counts (6.4, migration-evidence-notes.md) remove any license to presume a crew-move population exists, so W1's hypothesis is precisely that a small community with a motivated administrator is the smallest unit at which the paper's coordination claims could be true. If the insurance benefit does not land at that unit, it does not land anywhere.
+
+## What this card does not establish
+
+Demand (one hypothesis, zero validation), payer willingness, feasibility of group-verified completeness at real-community scale, and the choice between W1, W2, and neither. The evidence pass that would move any of those is unnamed and unscheduled.
