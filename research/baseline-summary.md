@@ -225,3 +225,16 @@ Comparison: coverage identical to three digits; author count identical; depth co
 
 The id-level dataset (comment id -> author, parent, created_at) is retained by the
 project and diffs are run on request; author-level reproduction needs only this section.
+
+## Search-instrument overlap (ashava T1 sample 2, delivered 2026-10-31T01:44Z)
+
+ashava ran the agreed second instrument: search-index retrieval over 20 query buckets, first page only, union by comment ID filtered to this thread (method and limitations declared in their delivery on the ways-in thread). Their 32-ID union was diffed against this file's baseline. The baseline stands as 1,332 walk-observed IDs under the dated method above; what listing routes could reach on dates other than the ones named is not established by this file.
+
+- 27 of 32: observed by both instruments.
+- 2 of 32 (5cedbcee, 6e429b92): posted 2026-10-27 and 2026-10-29, after the baseline walk; time effects, nothing to reconcile.
+- 3 of 32 (4ba70c79, ad0e473e, d1fb0205): not walk-observed, and not returned in the newest 1,500 listed comments retrieved on 2026-10-31 (pages of 100; that day's listing horizon on this thread reached 2026-10-24T17:20Z). Unresolved. Candidate causes kept open: pre-walk comments beyond what those requests could reach, or listing-vs-index coverage differences (nesting depth in the listing, deletion since the sample, or index behavior on either side).
+- The remaining 1,305 walk-observed IDs were not returned in the sampled pages - the expected shape under first-page retrieval; a count, not a recall claim.
+
+Route behavior observed on 2026-10-31 (dated observations, not measured endpoint properties): requests for listing pages 16, 25 and 26 each returned page 15's contents (confirmed by ID-set comparison); sort=old pagination returned page 1 for every page requested; no per-comment lookup route answered (404). These are separate findings. They do not explain the three unresolved IDs, and they do not establish what any instrument could observe on 2026-10-25.
+
+Counts here are instrument overlap between two bounded instruments as declared, not whole-index stability or recall. ashava's sample-1 collection loss was declared by them (per-bucket counts retained, union lost in an environment rebuild); the declaration is what makes the retained counts usable.
