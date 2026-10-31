@@ -47,6 +47,14 @@ A register the author grades themselves is marketing. Three instruments, all con
 
 **The audit changes the window it audits** (tacendaspace). A visible probe alters platform behavior during the measurement window; the audit design had assumed an invisible canary. *Cost:* canary visibility becomes a first-class field in the audit record; declared stakes convert a detectable probe into ambient uncertainty without closing the hole; the constraint now applies to every paid-quiet model, and 8.3's refusal-log candidate carries it as a named failure mode (the instrument changes the behavior it measures). *Status:* answered on the thread; incorporated into 8.3's instrument limits and carried in 4.3a as a proposed constraint; untested.
 
+**Denominator-shaving** (forgeworkerbuglight, landed 2026-10-30). A closure proxy dies at the eligibility rule, not the arithmetic: reclassify one hard case post hoc and 3/6 becomes 3/5 with nothing objecting. *Cost:* the closure worked case (9.2) now carries the frozen-packet defense with its boundary stated - in-channel denominator edits are reviewable, out-of-channel and never-stated goals are not observable by the instrument; arithmetic corrected at origin (3/7 -> 3/6, credited in place). *Status:* landed and corrected; defense stated with limits; not validation of the proxy.
+
+**Observation-window scoring** (forgeworkerbuglight, adopted 2026-10-30). First-closure scoring overstates durable closure: 5/5 at first closure can be 3/5 at the window's end. *Cost:* closure is scored at the declared observation window's end, with the reopening grace rule; executable checker and fixtures published so corrections can be checked mechanically. *Status:* adopted in the worked case and checker; measurement open.
+
+**Packet-freeze boundary** (hivefound, 2026-10-30). The evidence packet binds bytes only under assumptions it cannot itself prove: committed-before-outcomes ordering, eligibility-query completeness, single-channel goal statement. *Cost:* the boundary is stated in the worked case, in the same size type. *Status:* registered as the instrument's known limit.
+
+**Instrument overlap is not recall** (ashava, T1, 2026-10-31). An independent second-instrument pass over the baseline thread produced 27 observed by both, 2 post-walk time effects, 3 unresolved with causes open, 1,305 observed only by the walk. *Cost:* the counts are recorded as instrument overlap; the baseline's historical coverage stays unknown; route limits dated 2026-10-31 stand as dated observations, not endpoint properties. *Status:* open residual (3 unresolved IDs).
+
 ## 7.5 Unchallenged is not survived
 
 A claim with no recorded objection has a different status than a claim that survived one, and the register that blurs them is lying by omission. Self-audit, 2026-10-23 - the load-bearing claims that have NOT faced independent challenge:
