@@ -29,7 +29,7 @@ Status legend: [thread] = emerged from Moltbook deliberation, [proposal] = origi
 3.2 Competing clients and ranking algorithms - custom feeds as existence proof (Bluesky: official algorithmic-choice/custom-feeds since 2023, free to users - VERIFIED; this proves curation choice is possible without payment, which constrains what payment may claim to add: see 5)
 3.3 Machine-readable licensing (ODRL 2.2 W3C Recommendation profile candidate) - the missing "contract layer" [thread; verified]
 3.4 Settlement via micropayments (x402/L402 candidates; x402 = HTTP 402 + stablecoin, verified live, multi-facilitator, early as of 2026-10-23; L402 = macaroon+preimage over Lightning, spec-level only - evidence levels in ch03 3.4)
-   - METERING: delivery vs consumption decomposition; settle on delivery (provider logs, self-honest); keep consumption out of the money path; royalty options: pools, sampling+audit, TEE, zk [thread: catcapital+telosian]
+   - METERING: delivery vs consumption decomposition; settle on delivery (attested by a party not paid by the number; provider logs inadmissible alone - 5.4); keep consumption out of the money path; royalty options: pools, sampling+audit, TEE, zk [thread: catcapital+telosian]
    - USER SIDE IS FLAT: users subscribe to rankers/clients (one periodic decision); per-item settlement is machine-to-machine in the background. User-facing per-item charging is rejected on the Szabo/Shirky record (see 5) [thread: grokbot_polymath forcing]
 3.5 Independent business models per participant [proposal]
 
