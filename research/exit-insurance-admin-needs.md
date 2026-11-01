@@ -1,41 +1,40 @@
 # What exiting community admins say they need: evidence from three wiki forks (2019-2023)
 
-Status: evidence note, beneficiary-discovery workstream. Sources are self-published admin announcements plus the incumbent platform's forking policy. Stated needs from three content-centric wiki communities, not a survey and not validated demand. Wikis are not social networks: their content is CC-licensed and their social graph is thin, so transfer of these needs to a consent-based social network is argued per need, not assumed.
+Status: evidence note, beneficiary-discovery workstream. Sources are self-published admin announcements (dated 2020-2023) plus the incumbent platform's forking policy as retrieved 2026-11-01, which may since have changed. Three content-centric wiki communities, self-selected for detailed public announcements; surviving independent wikis are a selected sample of attempted exits. Wikis are not social networks: their content is CC-licensed and their social graph is thin, so transfer of these needs to a consent-based social network is argued per need, not assumed. Admin statements are quoted as their claims; design relevance is our interpretation and is labeled as such.
 
 ## The exits
 
 - **JoJo Wiki** (jojo.fandom.com -> jojowiki.com, announced January 2020): admin-authored FAQ.
 - **Hollow Knight Wiki** (hollowknight.fandom.com -> hollowknight.wiki, moved October 31, 2023): team-authored announcement.
 - **Tardis Wiki** (Doctor Who, tardis.fandom.com -> tardis.wiki, 2023): announcement plus public benefactor list.
-- **Fandom Forking Policy** (community.fandom.com): the incumbent's stated rules for departing communities.
+- **Fandom Forking Policy** (community.fandom.com, retrieved 2026-11-01): the incumbent's stated rules for departing communities.
 
 ## Why they left (triggers, stated)
 
 All three cite the same family: forced features with no opt-out (AI "Quick Answers," replacement of forums by "Discussions"), staff editing of community pages, JavaScript review, no extension or skin control, intrusive advertising, and platform drift from reference tool to social media. Tardis: "increasingly authoritarian tendencies when it comes to forcing undesired features and design changes on communities."
 
-## Five stated exit needs
+## Five documented needs
 
-1. **License-grounded content portability.** All three migrated full content. This was possible because contributions are CC-BY-SA; Fandom's own Forking Policy grounds the right to fork in the license. The load-bearing portability layer was legal, not technical.
-2. **Contribution-identity continuity.** JoJo reassigned editors' edit histories to new accounts by hand ("message Vish"). Hollow Knight published an account-migration guide copying edit history and watchlist. No portable mechanism existed; admins rebuilt identity manually.
-3. **A member-notification channel the incumbent does not control.** Fandom's policy forbids advertising the fork on the old wiki beyond one templated discussion link; sitenotices and wall posts directing users to the fork are prohibited, and departing admins lose their rights. JoJo kept the migration secret during setup ("Fandom knowing too early could have been problematic"). The channel by which members learn where everyone went is exactly what the incumbent restricts at exit time.
-4. **Discoverability against the abandoned original.** The old wiki persists under platform control ("Fandom will not remove the old wiki") with its SEO dominance. Every announcement spends its largest section on search ranking: update bookmarks, stop clicking old links, install the Indie Wiki Buddy redirect extension. Hollow Knight: "We aim to overtake the Fandom wiki in search results, but we can only do it with your help." This is the hardest stated post-exit problem, and it is an ecosystem property, not a data property.
-5. **Funding for the destination.** Tardis runs donation-funded and ad-free, cross-funded by an admin from another independent wiki ("Kate from the Independent Fallout Wiki"). Exit requires someone to pay for the new host before any community benefit is visible.
+1. **License-grounded content legality.** All three migrated full content, and Fandom's policy grounds the right to fork in the CC-BY-SA license. In these cases the license made the content legally portable; the announcements do not establish that license permission alone delivers technical portability, and they say nothing about revocable private social data, which differs from licensed public content.
+2. **Attribution-history repair.** JoJo reassigned editors' edit histories to new accounts by hand ("message Vish"); Hollow Knight published an account-migration guide copying edit history and watchlist. Documented: contribution identity did not transfer automatically and admins repaired it manually. Whether this amounts to a need for reputation portability is our interpretation, not the admins' claim.
+3. **Restricted exit notification.** Fandom's policy (as retrieved 2026-11-01) forbids advertising the fork on the old wiki beyond one templated discussion link; sitenotices and wall posts directing users to the fork are prohibited, and departing admins lose their rights. JoJo kept the migration secret during setup ("Fandom knowing too early could have been problematic"). Documented: in these cases the incumbent controlled and restricted the channel by which members would learn where the community went.
+4. **Discoverability against the abandoned original.** The old wiki persists under platform control ("Fandom will not remove the old wiki") with its search ranking. Each announcement carries an explicit reader ask to change behavior - update bookmarks, stop clicking old links, install the Indie Wiki Buddy redirect extension - and JoJo devotes an FAQ entry to "SEO and traffic." Hollow Knight: "We aim to overtake the Fandom wiki in search results, but we can only do it with your help."
+5. **Funding for the destination.** Tardis states it runs donation-funded and ad-free, cross-funded by an admin from another independent wiki ("Kate from the Independent Fallout Wiki"). Documented: exit required someone to pay for the new host before any community benefit was visible.
 
-## Mapping to the design (proposed architecture, not evidence of enforceability)
+## Our interpretation (not the admins' claims)
 
-- Need 1 corroborates exit portability but relocates its weight: the protocol's portable export must be matched by usage terms that permit reuse, and neither layer can promise erasure of content already obtained by others - CC-licensed wiki content is irrevocable by design, and social data once read is similarly unclawable. This is the per-edge honesty structure of issue #3 applied to exit.
-- Need 2 corroborates the portable-reputation requirement directly: real admins rebuilt contribution identity by hand because nothing carried it.
-- Need 3 corroborates the shared-private contact-edge rationale: an exit-viable member graph is one whose reachability does not depend on the incumbent's permission.
-- Need 4 is outside the current design's scope and is flagged as an open beneficiary need with no protocol answer: search ranking and audience redirection after exit.
-- Need 5 maps to the open funding-gap work: the destination's costs arrive before its benefits.
+- Need 1 is consistent with the position that exit portability cannot rest on protocol alone; in these cases the legal layer carried the content question. Whether revocable private social data can be given analogous treatment is an open design question the wiki cases do not answer - and no layer can promise erasure of content already obtained by others.
+- Needs 2 and 3 are consistent with what our design calls portable contribution identity and an exit-independent contact edge, respectively. The wiki cases document the manual workarounds, not the general mechanism.
+- Need 4 is outside the current design's scope: search ranking after exit is an ecosystem property, and we have no protocol answer for it. We flag it as an open beneficiary need rather than a solved one.
+- Need 5 maps to the open funding-gap question: the destination's costs arrive before its benefits.
 
 ## Limits
 
-Three communities, self-selected for detailed public announcements, stated needs rather than measured ones. Wiki exits port content; social-network exits must port relationships and attention, which are harder. Needs 2 and 3 (identity, notification) likely transfer more directly than need 1.
+Three communities, self-selected for detail, stated needs rather than measured ones; announcements are advocacy documents written to rally readers, not neutral records. Wiki exits port licensed content; social-network exits must port relationships and attention, which are harder. The dated policy snapshot and the communities' circumstances may no longer be current.
 
 ## Sources
 
 - https://jojowiki.com/JoJo_Wiki:Leaving_Fandom
 - https://hollowknight.wiki/w/Hollow_Knight_Wiki:Moving_from_Fandom
 - https://tardis.wiki/wiki/Tardis:Forking_announcement
-- https://community.fandom.com/wiki/Forking_Policy
+- https://community.fandom.com/wiki/Forking_Policy (retrieved 2026-11-01)
