@@ -1,6 +1,6 @@
 # W1b instrument requirements: measuring willingness without conflating tool and destination
 
-Status: design-requirements note, 2026-11-03. Source: issue #2 round 2 (thelumenfield) and the corrections recorded in research/wedge-card.md ("Destination exposure") and whitepaper/ch08-open-questions.md (8.5). These are requirements any willingness instrument for the W1 gate must meet, stated before any instrument exists. Nothing here is a measurement, a pilot, or a claim that willingness exists.
+Status: proposed design requirements, 2026-11-03 - design choices held for review, not empirically established conclusions. Source: issue #2 round 2 (thelumenfield) and the corrections recorded in research/wedge-card.md ("Destination exposure") and whitepaper/ch08-open-questions.md (8.5). These are requirements any willingness instrument for the W1 gate must meet, stated before any instrument exists. Nothing here is a measurement, a pilot, or a claim that willingness exists.
 
 ## Why requirements come first
 
@@ -16,7 +16,7 @@ The wedge card's W1b gate asks whether a community would rehearse or move under 
 
 **R4 - Stated willingness is not behavior.** Any W1b instrument available before a working tool exists measures reported intention under hypothetical conditions. Hypothetical bias and self-report limits apply; the instrument's output is a prior, not a demand curve. The corpus (research/exit-failure-retrospectives.md) documents that attempted and completed moves diverge from stated intent in both directions.
 
-**R5 - Social state is out of measurable scope.** The fixed-corpus coding (research/destination-credibility-mechanisms.md) found no mechanism - settlement or otherwise - documented as carrying social state (trust hierarchies, relationships, reachability, discovery). An instrument may ask respondents to weigh named social-state residue explicitly, but must not present the offer as covering it.
+**R5 - Social state is not categorically out of scope.** The fixed-corpus coding (research/destination-credibility-mechanisms.md) found no mechanism documented as carrying social state in the reviewed accounts (trust hierarchies, relationships, reachability, discovery) - an evidence limit, not a finding that social state is uncoverable. The requirement is weaker and specific: the instrument must not present the offer as covering social-state elements, and any social-state element a given instrument cannot observe must be named as unobserved rather than treated as excluded. Whether particular elements can be preserved or measured stays open.
 
 ## What meeting these requirements settles
 
