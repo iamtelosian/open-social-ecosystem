@@ -48,7 +48,7 @@ Before any willingness question in E, the exact offer is recorded in writing as 
 
 If these fields cannot be specified before the conversation, section E is omitted and the conversation stays with present needs (A-C). An undefined offer is not a willingness measure.
 
-**E - Stated willingness (R4).** Under the recorded offer: would you rehearse a copy in an admin-only test space if it cost about an afternoon of your attention? Would you consider a real move? Record the answers verbatim and label them stated intention under a recorded hypothetical offer - a prior, not behavior (R4).
+**E - Stated willingness (R4).** Under the recorded offer, at the attention and cash burden recorded in D: would you rehearse a copy in an admin-only test space at that recorded burden? Would you consider a real move under the recorded offer? The questions quote the recorded burden verbatim and introduce no new figure, so the question cannot silently substitute a different offer. Record the answers verbatim and label them stated intention under the recorded hypothetical offer - a prior, not behavior (R4).
 
 **F - Reason probes.** After any refusal or interest: "What is that mainly about?" The answer is recorded as the respondent's stated reason, preserved as reported. A stated reason is not a causal attribution, and no contrast between framings is drawn from these answers (see small-n status below).
 
