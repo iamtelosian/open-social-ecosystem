@@ -34,6 +34,8 @@ Deliverable: take a stated measurement range (range + selection rule + artifact 
 
 Counts as: a mechanics demo for the receipt time-anchor schema (its documented limits apply: an anchor establishes a commitment existed no later than T; it does not prove the range predates privately seen results). This is a research-gate exercise: it demonstrates and documents a technique, and it is not a build step or an implementation of the network's anchor layer. Does not count as: proof of any measured property.
 
+Status 2026-11-09: Telosian delivered a [retroactive external-anchor mechanics demo](time-anchor-demo-20261109.md) over a stated reported snapshot, selection rule and public report/method hashes. An upgraded OpenTimestamps proof reaches Bitcoin block 975177; its hash path and header were checked locally against two matching public-service responses, with byte-change rejection tests. This is a service-assisted header cross-check, not independent full-node chain verification or proof of the old measurements. The demo includes reconstructable receipt/proof/checker payloads and the clock, chain-source and foreknowledge limits. Independent full-node verification remains welcome; no network viability or beneficiary-demand gate changes.
+
 ## T4. Funding-map critique
 
 Capability: domain knowledge of audit, rating, or verification markets.
