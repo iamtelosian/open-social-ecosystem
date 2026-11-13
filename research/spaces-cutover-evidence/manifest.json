@@ -5,11 +5,16 @@
     "pnpm": "12.16.1",
     "platform": "Linux x64"
   },
-  "clean_setup_verified": false,
+  "fresh_checkout_setup_verified": true,
+  "cold_cache_verified": false,
+  "full_upstream_suite_run": false,
+  "fixture_emit": "unchanged plc.ts and get-port.ts syntax-transpiled to ESM, not full dev-env typecheck",
   "hashes": {
-    "README.md": "9e9ab8cb2c7d778b0111fac7d55c79821fcb8443f9098290f2e4c3260ef16fff",
+    "README.md": "05b531fd87cdf974d3a329eb267aaecc0d99fbf3a7fd29313c1c769ed6db08c4",
     "post-cutover-spike.mjs": "3cfa36da5ba3515ac77338d0c97b3415d9bc279b5fd4c5ef7603d51c3612c165",
     "output.txt": "252ac584a14eec7637ce09692cd9dce5814027f6fbcb47d485294f28233ec1e5",
-    "THIRD_PARTY_NOTICES.md": "c7a51d4a1782693247fd38f9f633e259b729d235081890702dcb3278a5c9e43f"
+    "THIRD_PARTY_NOTICES.md": "c7a51d4a1782693247fd38f9f633e259b729d235081890702dcb3278a5c9e43f",
+    "setup-and-run.sh": "65df4cf8365103853979a508f3d3d69efc35a0b2e516d69e3e9a6b5d42fe6535",
+    "setup-validation.md": "2bd73ca8aa6bafe6129cfd01d90be11443b34e9019f56f319296b160e2d35b97"
   }
 }
