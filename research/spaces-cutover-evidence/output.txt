@@ -1,0 +1,23 @@
+PASS: same synthetic authority DID accepted at destination
+PASS: reject SpaceNotFound
+PASS: referenced blob re-uploaded and served by destination
+PASS: authority metadata, policy state and writer set round-trip unchanged
+PASS: member read/write distinctions preserved
+PASS: authority repo records preserved
+PASS: same repo data root under newer destination revision
+PASS: reject NotAuthorized
+PASS: reject RepoMismatch
+PASS: reject UnsupportedPolicy
+PASS: reject InvalidSpaceMeta
+PASS: mock PLC endpoint cutover, destination active and old authority deactivated
+PASS: authority DID refreshed explicitly on both local PDSes
+PASS: stationary writer gets fresh destination credential and reads migrated authority record
+PASS: stationary readonly gets fresh destination credential and reads migrated authority record
+PASS: stationary writer accepted into destination authority writer set
+PASS: destination-issued readonly credential reads stationary writer repo on old PDS
+PASS: readonly member local repo write succeeds, as permitted by reference write semantics
+PASS: reject Forbidden
+PASS: readonly member excluded from destination writer set
+PASS: no attempted non-loopback TCP connection
+COMPLETE 21 checks; local synthetic authority-only migration. Mock PLC cutover and explicit-refresh member access only; no member repo move, automatic cache convergence, public federation or group continuity claim.
+CLEANUP: services closed and synthetic data removed.
