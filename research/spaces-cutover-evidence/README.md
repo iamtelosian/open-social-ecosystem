@@ -27,16 +27,22 @@ Only the authority repo moved. Members' repos stayed on the old PDS. This is not
 
 The Group proposal expressly excludes private join requests, moderation queue/history and OAuth sessions from migration. Even a compatible Group-policy result would need to keep those exclusions visible; transferring group-authored repo records alone would not prove operational community continuity.
 
-## Execution conditions and remaining reproduction gap
+## Reproduce the exact harness
 
-Recorded runtime: Node 22.23.4, pnpm 12.16.1, Linux x64. No tracked upstream files were changed.
+**13 November 2026 setup update:** `setup-and-run.sh` was validated end-to-end in a second new checkout with no existing `node_modules` or compiled PDS output. The exact harness and its assertions are unchanged. This closes the earlier prepared-workspace-only setup gap for the recorded Linux runtime, not for every machine or platform.
 
-This is retained passing code/output from a **prepared workspace**, not a verified clean reproduction package. A fresh checkout-to-pass sequence has not been validated. The frozen workspace install initially disabled lifecycle scripts; required lexicon/protobuf/template generation and a PDS-only TypeScript build completed; the OAuth-provider UI bundle was built to provide the runtime manifest; `better-sqlite3` was explicitly rebuilt for this Node runtime. The full dev-env build/migration suite was not completed after bounded legacy API-generation timeouts. Intermediate build failures were setup failures, not protocol failures. Do not infer that the upstream full suite passed.
+Prerequisites: Linux x64, Bash, Git, GNU `timeout`, `sha256sum`, Node **22.23.4**, and a working `pnpm` command that honors the upstream `packageManager` pin to **12.16.1** (for example, Corepack configured before running). Network access to GitHub and package registries is needed during setup. Package-manager downloads/store and native dependency caches may be reused. A cold package cache, a different Node version, macOS/Windows and unavailable registries were not tested. No credentials, account, Docker, Redis, Postgres, payment or public listener is needed by the harness.
 
-The harness imports built workspace packages and `packages/dev-env/dist/plc.js` directly, not the dev-env package barrel or its generated legacy client. In an already prepared checkout at the pinned revision, place it at `packages/pds/post-cutover-spike.mjs`, then from that checkout's root run:
+Download this evidence directory, inspect the script, and from that directory run:
 
 ```sh
-node packages/pds/post-cutover-spike.mjs
+bash setup-and-run.sh /absolute/path/to/a-new-checkout
 ```
 
-That is the harness invocation, not a complete clean setup recipe. The exact successful source and output are retained so another contributor can inspect assertions and challenge their scope even before the clean setup gap is closed. SHA-256 digests are in `manifest.json`. Attribution is in `THIRD_PARTY_NOTICES.md`.
+The destination must not exist. The script checks the harness digest, fetches the exact reference source pin, checks runtime versions, performs a frozen install with lifecycle scripts initially disabled, builds only required tooling/PDS code, generates required lexicons/mail templates, builds the OAuth UI runtime manifest and rebuilds SQLite. Each setup command has a 90-second bound, and the local harness has a 45-second bound. It stops at the first failure; do not interpret setup failures as protocol failures. A timed-out/killed run may leave its checkout or temporary fixture state for inspection. Nothing in the script deploys a service.
+
+To avoid the unrelated full dev-env/legacy API build, the script emits only upstream's unchanged `plc.ts` and `get-port.ts` test-fixture sources using the pinned workspace TypeScript compiler in ESM mode. This is syntax transpilation, **not** full dev-env typechecking. The PDS and its TypeScript project references are built with `tsc --build`. The full upstream dev-env migration suite was not run. Mail templates, the UI bundle and native dependency binaries are setup prerequisites, not additional capability validations.
+
+The successful script run left tracked upstream source/lockfiles unchanged. It copied no generated output from the earlier prepared checkout. The only authored untracked upstream-checkout file was the exact published harness. Shared package/dependency caches on this machine were available, so "fresh checkout" must not be read as "fresh operating system with empty caches."
+
+The 12 November `output.txt` remains the original successful output. The new setup run produced the same 21-check output and cleanup, byte-for-byte. `setup-validation.md` records the bounded setup result and its remaining limits. `manifest.json` holds SHA-256 digests; `THIRD_PARTY_NOTICES.md` retains attribution. No Group compatibility, automatic convergence, public federation or other protocol claim is added by making this existing harness easier to run.
